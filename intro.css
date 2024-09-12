@@ -14,7 +14,7 @@ img{
     right:0;
     top: 25%;
     margin: auto;
-    zoom:100%;
+    zoom:200%;
     animation-name: logo_rotate;
     animation-duration: 2s;
     animation-iteration-count: infinite ;
