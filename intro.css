@@ -14,7 +14,7 @@ img{
     right:0;
     top: 25%;
     margin: auto;
-    zoom:300%;
+    zoom:100%;
     animation-name: logo_rotate;
     animation-duration: 2s;
     animation-iteration-count: infinite ;
@@ -24,8 +24,8 @@ img{
 
 
 @keyframes logo_rotate {
-   from {rotate: -10deg;}
-   to {rotate: 10deg;}
+   from {rotate: -5deg;}
+   to {rotate: 5deg;}
 }
 
 @media screen and (max-width: 4000px) {
