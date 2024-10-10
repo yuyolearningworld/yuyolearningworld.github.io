@@ -12,9 +12,10 @@ img{
     position: absolute;
     left: 0;
     right:0;
-    top: 25%;
+    top: 30%;
     margin: auto;
-    zoom:200%;
+    zoom:100%;
+	z-index:-10;
     animation-name: logo_rotate;
     animation-duration: 2s;
     animation-iteration-count: infinite ;
@@ -22,55 +23,22 @@ img{
     animation-timing-function: ease-in-out
 }
 
+#transition{
+	position: absolute;
+    left: 110%;
+	zoom:75%;
+	animation-name: transition;
+	animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
 
 @keyframes logo_rotate {
    from {rotate: -5deg;}
    to {rotate: 5deg;}
 }
 
-@media screen and (max-width: 4000px) {
-    html{zoom:75%}
-}
-
-@media screen and (max-width: 2000px) {
-    html{zoom:70%}
-}
-
-@media screen and (max-width: 1850px) {
-    html{zoom:67.5%}
-}
-
-@media screen and (max-width: 1700px) {
-    html{zoom:65%}
-}
-
-@media screen and (max-width: 1550px) {
-    html{zoom:62.5%}
-}
-
-@media screen and (max-width: 1400px) {
-    html{zoom:60%}
-}
-
-@media screen and (max-width: 1250px) {
-    html{zoom:55%}
-}
-
-@media screen and (max-width: 1100px) {
-    html{zoom:50%}
-}
-
-@media screen and (max-width: 950px) {
-    html{zoom:45%}
-    .grid_ribbon {gap:225px}
-}
-
-@media screen and (max-width: 800px) {
-    html{zoom:40%}
-    .grid_ribbon {gap:175px}
-}
-
-@media screen and (max-width: 650px) {
-    html{zoom:35%}
-    .grid_ribbon {gap:100px}
+@keyframes transition {
+   from {left: 110%;}
+   to {left: -50%;}
 }

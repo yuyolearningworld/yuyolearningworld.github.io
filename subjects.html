@@ -9,7 +9,7 @@
 <body>
     
     <script src="ribbonbuttons.js"></script>
-    
+	
     <img id="animation_frame" src="assets\animation_frame.png">
     
     <div class="grid_ribbon">
@@ -19,5 +19,92 @@
         <img  onclick="settingspress()" id="settings" src="assets\settings.png">
     </div>
     <img id="ribbon_underline" src="assets\ribbon_underline.png">
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+<!--
+> Subject 1 - Romaji
+> Subject 2 - Hiragana
+> Subject 3 - Katakana
+> Subject 4 - Daily words
+> Subject 5 - N5 grammar
+> Subject 6 - N5 words
+> Subject 7 - N4 grammar
+> Subject 8 - N4 words
+> Subject 9 - N3 grammar
+> Subject 10 - N3 words
+> Subject 11 - N2 grammar
+> Subject 12 - N2 words
+> Subject 13 - N1 grammar
+> Subject 14 - N1 words
+-->
+
+	<script src="subjects.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+	
+	<script src="learning.js"></script>
+
+    <p class="subjecttext" id="subject1" onclick="dropdown()">> Subject 1 - Romaji</p>
+		<p class="lessontext" id="subject1_lesson1">Introduction to Yuyo Learning World 
+		<a id="Romaji-learn" class="learntext" onclick="learn()" >Learn</a>
+		<a class="quiztext">Quiz</a> 
+		</p>
+		
+		<p class="lessontext" id="subject1_lesson2">What is romaji?</p>
+		<p class="lessontext" id="subject1_lesson3">Why is Romaji useful?</p>
+		
+		
+	<p class="subjecttext" id="subject2" onclick="dropdown()">> Subject 2 - Hiragana</p>
+		<a class="lessontext" id="subject2_lesson">test text</a>
+		
+	<p class="subjecttext" id="subject3" onclick="dropdown(this.id)">> Subject 3 - Katakana</p>
+		<a class="lessontext" id="subject3_lesson">test text</a>
+
+	<p class="subjecttext" id="subject4" onclick="dropdown(this.id)">> Subject 4 - Daily words</p>
+		<a class="lessontext" id="subject4_lesson">test text</a>
+
+	<p class="subjecttext" id="subject5" onclick="dropdown(this.id)">> Subject 5 - N5 grammar</p>
+		<a class="lessontext" id="subject5_lesson">test text</a>
+
+	<p class="subjecttext" id="subject6" onclick="dropdown(this.id)">> Subject 6 - N5 words</p>
+		<a class="lessontext" id="subject6_lesson">test text</a>
+
+	<p class="subjecttext" id="subject7" onclick="dropdown(this.id)">> Subject 7 - N4 grammar</p>
+		<a class="lessontext" id="subject7_lesson">test text</a>
+
+	<p class="subjecttext" id="subject8" onclick="dropdown(this.id)">> Subject 8 - N4 words</p>
+		<a class="lessontext" id="subject8_lesson">test text</a>
+
+	<p class="subjecttext" id="subject9" onclick="dropdown(this.id)">> Subject 9 - N3 grammar</p>
+		<a class="lessontext" id="subject9_lesson">test text</a>
+
+	<p class="subjecttext" id="subject10" onclick="dropdown(this.id)">> Subject 10 - N3 words</p>
+		<a class="lessontext" id="subject10_lesson">test text</a>
+
+	<p class="subjecttext" id="subject11" onclick="dropdown(this.id)">> Subject 11 - N2 grammar</p>
+		<a class="lessontext" id="subject11_lesson">test text</a>
+
+	<p class="subjecttext" id="subject12" onclick="dropdown(this.id)">> Subject 12 - N2 words</p>
+		<a class="lessontext" id="subject12_lesson">test text</a>
+
+	<p class="subjecttext" id="subject13" onclick="dropdown(this.id)">> Subject 13 - N1 grammar</p>
+		<a class="lessontext" id="subject13_lesson">test text</a>
+
+	<p class="subjecttext" id="subject14" onclick="dropdown(this.id)">> Subject 14 - N1 words</p>
+		<a class="lessontext" id="subject14_lesson">test text</a>
+	
+		
+
+
 </body>
 </html>
