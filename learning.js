@@ -1,4 +1,4 @@
-
+import data from './lessons.json';
 
 function learn(){
 	//var testhash = CryptoJS.MD5(event.srcElement.id).toString();
