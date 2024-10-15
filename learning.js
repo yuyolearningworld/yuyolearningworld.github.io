@@ -3,8 +3,12 @@
 function learn(){
 	//var testhash = CryptoJS.MD5(event.srcElement.id).toString();
 	fetch('./lessons.json')
-		.then((res) => console.log(res))
-		.then((data) => console.log(data));
+	.then(response => response.json())
+	.then(response => {
+	
+		console.log(response)
+	
+	})
 
 }
 function quiz(){}
