@@ -5,13 +5,6 @@
 		"pages": {
 			"page1": "this is test text"
 		}
-	},
-
-	"What is Romaji?": {
-		"subject": 1,
-		"lesson": 2,
-		"pages": {
-			"page1": "this is test text"
-		}
 	}
+
 }
