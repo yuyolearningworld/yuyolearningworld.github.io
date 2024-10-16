@@ -8,7 +8,7 @@ function getjson(){
 }
 
 function learn(subject, lesson){
-	data = getjson()
+	var data = getjson()
 	console.log(data)
 }
 
