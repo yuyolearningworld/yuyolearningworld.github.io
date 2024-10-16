@@ -2,7 +2,7 @@ var data
 fetch('./lessons.json')
 	.then(response => response.json())
 	.then(response => {
-		data = response
+		var data = response
 	})
 
 function learn(subject, lesson){
