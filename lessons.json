@@ -1,7 +1,6 @@
 {
-	"Introduction to Yuyo Learning World": {
-		"subject": 1,
-		"lesson": 1,
+	"__11__": {
+		"title": "Introduction to Yuyo Learning World",
 		"pages": {
 			"page1": "this is test text"
 		}
