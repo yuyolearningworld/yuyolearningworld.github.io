@@ -9,7 +9,7 @@ function learn(subject, lesson){
 			var totalitems = Object.keys(response[currentdata])
 			console.log(totalitems)
 
-			var title = response[currentdata][totalitems[0]][0]
+			var title = response[currentdata][totalitems[0]]
 			console.log(title)
 		})
 	}
