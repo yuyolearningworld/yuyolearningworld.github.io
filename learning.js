@@ -1,6 +1,4 @@
-
 function learn(subject, lesson){
-	window.location.replace("lesson.html")  
 	fetch('./lessons.json')
 		.then(response => response.json())
 		.then(response => {
@@ -12,8 +10,8 @@ function learn(subject, lesson){
 	for (i=1; i<numofpages; i++){
 		pageContents.push(response[currentdata]["page" + i])
 	}
-
-	document.write("test if can write in other documents")
+	var lessonpage = window.open("lesson.html")
+	lessonpage.document.write("test if can write in other documents")
 		
 	})
 }
