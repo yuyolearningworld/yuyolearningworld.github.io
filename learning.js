@@ -1,5 +1,9 @@
 
 function learn(subject, lesson){
+	document.getElementById("animation_frame").style.animationName = "pagechange_left"
+    document.getElementById("animation_frame").style.animationDuration = "2s"
+    document.getElementById("animation_frame").style.animationFillMode = "forwards"
+    setTimeout(function(){window.location.replace("lesson.html")},2000)  
 	fetch('./lessons.json')
 		.then(response => response.json())
 		.then(response => {
@@ -12,7 +16,7 @@ function learn(subject, lesson){
 				pageContents.push(response[currentdata]["page" + i])
 			}
 
-			console.log(title + "\n" + numofpages + "\n" + pageContents)
+			document.write("test if can write in other documents")
 		})
 	}
 
