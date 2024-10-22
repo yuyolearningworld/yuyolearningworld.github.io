@@ -3,14 +3,16 @@ function learn(subject, lesson){
 	fetch('./lessons.json')
 		.then(response => response.json())
 		.then(response => {
-
 			currentdata = "__" + subject + lesson + "__"
-
 			var totalitems = Object.keys(response[currentdata])
-			console.log(totalitems)
+			var title = response[currentdata]["title"]
+			var numofpages = totalitems.length - 1
+			var pageContents = []
+			for (i=1; i<numofpages; i++){
+				pageContents.push(response[currentdata]["page" + i])
+			}
 
-			var title = response[currentdata][totalitems[0]]
-			console.log(title)
+			console.log(title + "\n" + numofpages + "\n" + pageContents)
 		})
 	}
 
