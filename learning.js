@@ -11,7 +11,7 @@ function learn(subject, lesson){
 		pageContents.push(response[currentdata]["page" + i])
 	}
 	var lessonpage = window.open("lesson.html")
-	lessonpage.document.write("test if can write in other documents")
+	lessonpage.document.write("<title> test </title>")
 		
 	})
 }
