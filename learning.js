@@ -1,7 +1,3 @@
-data1 = null
-data2 = null
-
-
 var currentsubject = null
 var currentlesson = null
 var currentpage = null
