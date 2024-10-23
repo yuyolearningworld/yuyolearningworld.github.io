@@ -10,7 +10,7 @@ function learn(subject, lesson){
 	for (i=1; i<numofpages; i++){
 		pageContents.push(response[currentdata]["page" + i])
 	}
-	var lessonpage = window.open("lesson.html")
+	var lessonpage = window.open()
 	
 	var html = `
 <!DOCTYPE html>
