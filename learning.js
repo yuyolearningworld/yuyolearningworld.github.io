@@ -14,7 +14,7 @@ function learn(subject, lesson, page){
 	var title = response[currentdata]["title"]
 	globalThis.totalpages = totalitems.length - 1
 	var pageContents = []
-	for (i=1; i<numofpages; i++){
+	for (i=1; i<totalpages; i++){
 		pageContents.push(response[currentdata]["page" + i])
 	}
 	var lessonpage = window.open("lesson.html")
