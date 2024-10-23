@@ -48,7 +48,6 @@ function learn(subject, lesson, page){
 	})
 }
 
-var pageCount = 0
 function increasePage(){
 	learn(currentsubject, currentlesson, currentpage + 1)
 }
