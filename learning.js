@@ -51,8 +51,8 @@ function learn(subject, lesson, page){
 }
 
 function increasePage(){
-	console.log("up")
 	if (currentpage >= totalpages) {
+		console.log("up")
 		return
 	} else {
 		learn(currentsubject, currentlesson, currentpage + 1)
@@ -60,8 +60,8 @@ function increasePage(){
 }
 
 function decreasePage(){
-	console.log("up")
 	if (currentpage <= 0) {
+		console.log("down")
 		return
 	} else {
 		learn(currentsubject, currentlesson, currentpage - 1)
