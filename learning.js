@@ -42,7 +42,7 @@ function learn(subject, lesson, page){
 </body>
 </html>
 `
-
+	lessonpage.document.write(html)
 	})
 }
 
