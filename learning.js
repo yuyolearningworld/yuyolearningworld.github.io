@@ -18,22 +18,16 @@ function learn(subject, lesson){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuyo Learning World</title>
+    <title>` + title + `</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    
-    <script src="ribbonbuttons.js"></script>
-    
-    <img id="animation_frame" src="assets\\animation_frame.png">
+	<p id="lessontitle">` + title + `</p>
+	<div id="lessontextbox">` + pageContents[0] + `</div>
 
-    <div class="grid_ribbon">
-        <img id="logo" src="assets\\yuyo_logo.png">
-        <img onclick="subjectpress()" id="subjects" src="assets\\subjects.png">
-        <img  onclick="koikoipress()" id="koikoi" src="assets\\koikoi.png">
-        <img  onclick="settingspress()" id="settings" src="assets\\settings.png">
-    </div>
-    <img id="ribbon_underline" src="assets\\ribbon_underline.png">
+	<img class="arrow" id="rightarrow" src="assets\\rightarrow.png">
+	<img class="arrow" id="leftarrow" src="assets\\leftarrow.png">
+	
 </body>
 </html>
 `
