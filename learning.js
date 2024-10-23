@@ -32,7 +32,8 @@ function learn(subject, lesson){
 </html>
 `
 	lessonpage.document.write(html)
-		
+	if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+		lessonpage.document.write(html)	
 	})
 }
 
