@@ -12,7 +12,7 @@ function learn(subject, lesson, page){
 	currentdata = "__" + subject + lesson + "__"
 	var totalitems = Object.keys(response[currentdata])
 	var title = response[currentdata]["title"]
-	var numofpages = totalitems.length - 1
+	globalThis.totalpages = totalitems.length - 1
 	var pageContents = []
 	for (i=1; i<numofpages; i++){
 		pageContents.push(response[currentdata]["page" + i])
@@ -27,6 +27,7 @@ function learn(subject, lesson, page){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>` + title + `</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="assets\\tablogo.png">
 </head>
 <body>
 
@@ -35,8 +36,8 @@ function learn(subject, lesson, page){
 	<p id="lessontitle">` + title + `</p>
 	<div id="lessontextbox">` + pageContents[page] + `</div>
 
-	<img class="arrow" id="rightarrow" src="assets\\rightarrow.png">
-	<img class="arrow" id="leftarrow" src="assets\\leftarrow.png">
+	<img class="arrow" id="rightarrow" onclick="increasePage()" src="assets\\rightarrow.png">
+	<img class="arrow" id="leftarrow" onclick="decreasePage()" src="assets\\leftarrow.png">
 	
 </body>
 </html>
@@ -50,9 +51,17 @@ function learn(subject, lesson, page){
 }
 
 function increasePage(){
-	learn(currentsubject, currentlesson, currentpage + 1)
+	if (currentpage >= totalpages) {
+		return
+	} else {
+		learn(currentsubject, currentlesson, currentpage + 1)
+	}
 }
 
 function decreasePage(){
-	learn(currentsubject, currentlesson, currentpage - 1)
+	if (currentpage <= 0) {
+		return
+	} else {
+		learn(currentsubject, currentlesson, currentpage - 1)
+	}
 }
