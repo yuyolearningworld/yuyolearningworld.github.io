@@ -1,4 +1,14 @@
-function learn(subject, lesson){
+data1 = null
+data2 = null
+
+
+var currentsubject = null
+var currentlesson = null
+var currentpage = null
+function learn(subject, lesson, page){
+	globalThis.currentsubject = subject
+	globalThis.currentlesson = lesson
+	globalThis.currentpage = page
 	fetch('./lessons.json')
 		.then(response => response.json())
 		.then(response => {
@@ -10,8 +20,8 @@ function learn(subject, lesson){
 	for (i=1; i<numofpages; i++){
 		pageContents.push(response[currentdata]["page" + i])
 	}
-	var lessonpage = window.open()
-	
+	var lessonpage = window.open("lesson.html")
+
 	var html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -22,8 +32,11 @@ function learn(subject, lesson){
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+	<script src="learning.js"></script>
+
 	<p id="lessontitle">` + title + `</p>
-	<div id="lessontextbox">` + pageContents[0] + `</div>
+	<div id="lessontextbox">` + pageContents[page] + `</div>
 
 	<img class="arrow" id="rightarrow" src="assets\\rightarrow.png">
 	<img class="arrow" id="leftarrow" src="assets\\leftarrow.png">
@@ -31,6 +44,7 @@ function learn(subject, lesson){
 </body>
 </html>
 `
+	
 	lessonpage.document.write(html)
 	if (performance.navigation.type == 0) {
 		lessonpage.document.write(html)
@@ -38,4 +52,11 @@ function learn(subject, lesson){
 	})
 }
 
-function quiz(){}
+var pageCount = 0
+function increasePage(){
+	learn(currentsubject, currentlesson, currentpage + 1)
+}
+
+function decreasePage(){
+	learn(currentsubject, currentlesson, currentpage + 1)
+}
