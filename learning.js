@@ -1,6 +1,7 @@
 var currentsubject = null
 var currentlesson = null
 var currentpage = null
+var totalpages = null
 function learn(subject, lesson, page){
 	globalThis.currentsubject = subject
 	globalThis.currentlesson = lesson
@@ -53,5 +54,5 @@ function increasePage(){
 }
 
 function decreasePage(){
-	learn(currentsubject, currentlesson, currentpage + 1)
+	learn(currentsubject, currentlesson, currentpage - 1)
 }
