@@ -42,11 +42,7 @@ function learn(subject, lesson, page){
 </body>
 </html>
 `
-	
-	lessonpage.document.write(html)
-	if (performance.navigation.type == 0) {
-		lessonpage.document.write(html)
-	}
+
 	})
 }
 
