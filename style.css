@@ -137,17 +137,13 @@ img,p,a{
 }
 
 #lessontextbox{
-	--width: 90%;
-	--height: 150vh;
-	margin: 0 auto;
+	width:200vw;
+	height:1500px;
+	margin: 10px;
 	position: absolute;
 	outline: 8px solid black;
-	width: var(--width);
-	height: var(--height);
-	left: calc(95% - var(--width));
 	top: 7.5%;
-	padding: 10px;
-	
+	left:10%;
 	font-family: main;
 	user-select: none;
 	-webkit-user-drag: none;
@@ -158,9 +154,14 @@ img,p,a{
 }
 
 #lessontitle{
-    margin: 0 auto;
+	width:200vw;
+	height:100px;
+	margin: 10px;
 	position: absolute;
-	top: 1%;
+	top: 0.5%;
+	left:10%;
+	text-align: center;
+	
     font-size: 100px;
     letter-spacing: 5px;
 }
