@@ -138,11 +138,11 @@ img,p,a{
 
 #lessontextbox{
 	width:200vw;
-	height:1500px;
+	height:180vh;
 	margin: 10px;
 	position: absolute;
 	outline: 8px solid black;
-	top: 7.5%;
+	top: 10%;
 	left:10%;
 	font-family: main;
 	user-select: none;
@@ -158,7 +158,7 @@ img,p,a{
 	height:100px;
 	margin: 10px;
 	position: absolute;
-	top: 0.5%;
+	top: 1;
 	left:10%;
 	text-align: center;
 	
