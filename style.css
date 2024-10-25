@@ -7,7 +7,6 @@ html {
 img,p,a{
     font-family: main;
 	user-select: none;
-	user-drag: none;
 	-webkit-user-drag: none;
 }
 
@@ -151,7 +150,6 @@ img,p,a{
 	
 	font-family: main;
 	user-select: none;
-	user-drag: none;
 	-webkit-user-drag: none;
 	font-size: 50px;
     letter-spacing: 5px;
@@ -162,7 +160,7 @@ img,p,a{
 #lessontitle{
     margin: 0 auto;
 	position: absolute;
-
+	top: 1%;
     font-size: 100px;
     letter-spacing: 5px;
 }
