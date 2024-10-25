@@ -147,6 +147,7 @@ img,p,a{
 	height: var(--height);
 	left: calc(95% - var(--width));
 	top: 7.5%;
+	padding: 10px;
 	
 	font-family: main;
 	user-select: none;
@@ -159,7 +160,9 @@ img,p,a{
 }
 
 #lessontitle{
-    text-align: center;
+    margin: 0 auto;
+	position: absolute;
+
     font-size: 100px;
     letter-spacing: 5px;
 }
