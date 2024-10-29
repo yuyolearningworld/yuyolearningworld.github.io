@@ -1,5 +1,5 @@
 
-function learn(subject, lesson, page){
+function learn(subject, lesson){
 	fetch('./lessons.json')
 		.then(response => response.json())
 		.then(response => {
@@ -33,13 +33,25 @@ function learn(subject, lesson, page){
 
 	<script>
 		var data = [` + pageContents + `]
-		document.getElementById("lessontextbox").innerText = data[0]
-		console.log(data)
+		var currentpage = 1
+		document.getElementById("lessontextbox").innerText = data[currentpage - 1]
+
+		function increasePage(){
+			var currentpage = currentpage + 1
+			if (currentpage-1 > data.length){return}
+			else {document.getElementById("lessontextbox").innerText = data[currentpage - 1]}
+		}
+
+		function decreasePage(){
+			var currentpage = currentpage - 1
+			if (currentpage-1 < 0){return}
+			else {document.getElementById("lessontextbox").innerText = data[currentpage - 1]}
+		}
 
 	</script>
 
-	<img class="arrow" id="rightarrow" onclick="increasePage(` + (page+1) + `)" src="assets\\rightarrow.png">
-	<img class="arrow" id="leftarrow" onclick="decreasePage(` + (page-1) + `)" src="assets\\leftarrow.png">
+	<img class="arrow" id="rightarrow" onclick="increasePage()" src="assets\\rightarrow.png">
+	<img class="arrow" id="leftarrow" onclick="decreasePage()" src="assets\\leftarrow.png">
 
 	
 </body>
