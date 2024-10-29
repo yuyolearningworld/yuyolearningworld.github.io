@@ -33,19 +33,19 @@ function learn(subject, lesson){
 
 	<script>
 		var data = [` + pageContents + `]
-		var currentpage = 1
-		document.getElementById("lessontextbox").innerText = data[currentpage - 1]
+		var current = 0
+		document.getElementById("lessontextbox").innerText = data[current]
 
 		function increasePage(){
-			var currentpage = currentpage + 1
-			if (currentpage-1 > data.length){return}
-			else {document.getElementById("lessontextbox").innerText = data[currentpage - 1]}
+			var current += 1
+			if (data[current] == null) {return}
+			document.getElementById("lessontextbox").innerText = data[current]
 		}
 
 		function decreasePage(){
-			var currentpage = currentpage - 1
-			if (currentpage-1 < 0){return}
-			else {document.getElementById("lessontextbox").innerText = data[currentpage - 1]}
+			var current -= 1
+			if (data[current] == null) {return}
+			document.getElementById("lessontextbox").innerText = data[current]
 		}
 
 	</script>
