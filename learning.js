@@ -27,12 +27,13 @@ function learn(subject, lesson, page){
 	<script src="learning.js"></script>
 
 	<p id="lessontitle">` + title + `</p>
-	<div id="lessontextbox">` + pageContents[page] + `</div>
+	<div id="lessontextbox"> </div>
 
 	<!-- <img class="yuyo" src="yuyo_sprites\\yuyo0.png"> -->
 
 	<script>
 		var data = [` + pageContents + `]
+		document.getElementById("lessontextbox").innerText = data[0]
 		console.log(data)
 
 	</script>
