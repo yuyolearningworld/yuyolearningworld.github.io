@@ -52,7 +52,7 @@ img,p,a{
     top:-20px;
     left:-30%;
     animation-name: pagechange_right;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-fill-mode: forwards;
     zoom:180%;
 }
@@ -128,6 +128,7 @@ img,p,a{
 	position:fixed;
 	bottom:0;
 	left:0;
+	visibility: hidden;
 }
 
 #rightarrow{

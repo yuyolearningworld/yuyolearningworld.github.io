@@ -26,6 +26,8 @@ function learn(subject, lesson){
 </head>
 <body>
 
+	<img id="animation_frame" src="assets\\animation_frame.png">
+
 	<script src="learning.js"></script>
 
 	<p id="lessontitle">` + title + `</p>
@@ -35,37 +37,75 @@ function learn(subject, lesson){
 	
 
 	<script>
-
+		var data = [` + pageContents + `]
+		var current = 0
+		var writingstate = 0
+		var spritestate = 0
 		
+
+		function yuyospriteflip(){
+			if (spritestate == 1) {
+				document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo0.png"
+				globalThis.spritestate = 0
+			} else { 
+				document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo1.png"
+				globalThis.spritestate = 1
+
+			}
+
+		}
 
 		function yuyospeak(text) {
 			var i = 0
-			var text = text
+			var text = text.replaceAll(" "," ")
+			var text = text.replaceAll("#"," <br> ")
+			if (text.length % 2 == 1) {
+				var text = text + " "
+			}
+			globalThis.writingstate = 1
+			setInterval(function(){
+				if (current == 0) {
+					document.getElementById("leftarrow").style.visibility = "hidden"
+				} else {document.getElementById("leftarrow").style.visibility = "visible"}
+
+				if (current == data.length-1) {
+					document.getElementById("rightarrow").style.visibility = "hidden"
+				} else {document.getElementById("rightarrow").style.visibility = "visible"}
+			
+				if (document.getElementById("lessontextbox").innerText == text) {
+					globalThis.writingstate = 0
+				}
+			},100)
 			function main(counter) {
 				var i = counter
 				if (i < text.length) {
-				document.getElementById("lessontextbox").innerText += text.charAt(i)
+				document.getElementById("lessontextbox").innerHTML += text[i]
 				var i = i + 1
-				setTimeout(funtion(){main(i)}, 100)
-				}
+				yuyospriteflip()
+				setTimeout(function(){main(i)}, 50)
+				} 
 			}
 			main(i)
-		}
 			
-	
+		}
 
-		var data = [` + pageContents + `]
-		var current = 0
-		setTimeout(yuyospeak(data[current]),50)
+		//program start wait
+		setTimeout(function(){
+			yuyospeak(data[current])
+		},2500)
 
 		function increasePage(){
+			if (writingstate == 1) {return}
 			if (current + 1 > data.length-1) {return}
+			document.getElementById("lessontextbox").innerText = ""
 			globalThis.current =  current + 1
 			yuyospeak(data[current])
 		}
 
 		function decreasePage(){
+			if (writingstate == 1) {return}	
 			if (current - 1 < 0) {return}
+			document.getElementById("lessontextbox").innerText = ""
 			globalThis.current =  current - 1
 			yuyospeak(data[current])
 		}
@@ -87,3 +127,4 @@ function learn(subject, lesson){
 		document.getElementById("animation_frame").style.animationFillMode = "forwards"},500)},2000)
 	})
 }
+
