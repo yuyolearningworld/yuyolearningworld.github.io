@@ -32,8 +32,11 @@ function learn(subject, lesson){
 
 	<p id="lessontitle">` + title + `</p>
 
-	<div id="lessontextbox"> </div>
+	<div id="lessontextbox"></div>
 	<img id="learningyuyo" src="yuyo_sprites\\yuyo0.png">
+
+	<img class="arrow" id="rightarrow" onclick="increasePage()" src="assets\\rightarrow.png">
+	<img class="arrow" id="leftarrow" onclick="decreasePage()" src="assets\\leftarrow.png">
 	
 
 	<script>
@@ -41,6 +44,8 @@ function learn(subject, lesson){
 		var current = 0
 		var writingstate = 0
 		var spritestate = 0
+		var halt = false
+		
 		
 
 		function yuyospriteflip(){
@@ -55,16 +60,11 @@ function learn(subject, lesson){
 		}
 
 		function yuyospeak(text) {
+			yuyospriteflip()
 			var i = 0
 			var text = text.replaceAll(" "," ")
 			var text = text.replaceAll("#","\\r\\n ")
-			if (text.length % 2 == 1) {
-				var text = text + "_"
-			}
 			globalThis.writingstate = 1
-			if (document.getElementById("lessontextbox").innerText == text) {
-					globalThis.writingstate = 0
-				}
 			setInterval(function(){
 				if (current == 0) {
 					document.getElementById("leftarrow").style.visibility = "hidden"
@@ -74,23 +74,32 @@ function learn(subject, lesson){
 					document.getElementById("rightarrow").style.visibility = "hidden"
 				} else {document.getElementById("rightarrow").style.visibility = "visible"}
 			
-				if (document.getElementById("lessontextbox").innerText == text) {
+				document.getElementById("lessontextbox").addEventListener("click", function(){
+					globalThis.halt = true
+					document.getElementById("lessontextbox").textContent = ""
+					document.getElementById("lessontextbox").textContent = text
 					globalThis.writingstate = 0
-				}
+					document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo0.png"
+					globalThis.halt = false
+					return
+				})
 
-				console.log(globalThis.writingstate)
+				if (document.getElementById("lessontextbox").textContent == text) {
+					globalThis.writingstate = 0
+					document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo0.png"
+				}
 			},100)
 			function main(counter) {
+				if (halt) {return}
+				yuyospriteflip()
 				var i = counter
 				if (i < text.length) {
 				document.getElementById("lessontextbox").textContent += text[i]
 				var i = i + 1
-				yuyospriteflip()
-				setTimeout(function(){main(i)}, 50)
+				setTimeout(function(){main(i)}, 75)
 				} 
 			}
 			main(i)
-			
 		}
 
 		//program start wait
@@ -116,8 +125,7 @@ function learn(subject, lesson){
 
 	</script>
 
-	<img class="arrow" id="rightarrow" onclick="increasePage()" src="assets\\rightarrow.png">
-	<img class="arrow" id="leftarrow" onclick="decreasePage()" src="assets\\leftarrow.png">
+	
 
 	
 </body>

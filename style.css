@@ -147,7 +147,8 @@ img,p,a{
 	left:10%;
 	
 	font-family: main;
-	white-space: pre;
+	white-space: pre-wrap;
+	text-align: center;
 	user-select: none;
 	-webkit-user-drag: none;
 	font-size: 50px;
@@ -156,8 +157,9 @@ img,p,a{
 	padding: 40px;
 	padding-top: 25px;
 	padding-right: 25px;
-	overflow: scroll;
+	overflow-y: scroll;
 	overflow-x: hidden;
+	word-break:keep-all;
 }
 
 #lessontextbox::-webkit-scrollbar {
