@@ -37,14 +37,14 @@ function learn(subject, lesson){
 		document.getElementById("lessontextbox").innerText = data[current]
 
 		function increasePage(){
-			var current += 1
-			if (data[current] == null) {return}
+			if (current + 1 > data.length-1) {return}
+			globalThis.current =  current + 1
 			document.getElementById("lessontextbox").innerText = data[current]
 		}
 
 		function decreasePage(){
-			var current -= 1
-			if (data[current] == null) {return}
+			if (current - 1 < 0) {return}
+			globalThis.current =  current - 1
 			document.getElementById("lessontextbox").innerText = data[current]
 		}
 
@@ -57,6 +57,7 @@ function learn(subject, lesson){
 </body>
 </html>
 `
+
 	lessonhtml.document.write(html)
 
 	})

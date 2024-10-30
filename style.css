@@ -141,7 +141,7 @@ img,p,a{
 	height:180vh;
 	margin: 10px;
 	position: absolute;
-	outline: 8px solid black;
+	outline: 1px solid black;
 	top: 10%;
 	left:10%;
 	
@@ -150,7 +150,7 @@ img,p,a{
 	-webkit-user-drag: none;
 	font-size: 50px;
     letter-spacing: 5px;
-	text-indent: 10px;
+	text-indent: 20px;
 	
 }
 
