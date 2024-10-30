@@ -50,7 +50,6 @@ function learn(subject, lesson){
 			} else { 
 				document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo1.png"
 				globalThis.spritestate = 1
-
 			}
 
 		}
@@ -58,11 +57,14 @@ function learn(subject, lesson){
 		function yuyospeak(text) {
 			var i = 0
 			var text = text.replaceAll(" "," ")
-			var text = text.replaceAll("#"," <br> ")
+			var text = text.replaceAll("#","\\r\\n ")
 			if (text.length % 2 == 1) {
-				var text = text + " "
+				var text = text + "_"
 			}
 			globalThis.writingstate = 1
+			if (document.getElementById("lessontextbox").innerText == text) {
+					globalThis.writingstate = 0
+				}
 			setInterval(function(){
 				if (current == 0) {
 					document.getElementById("leftarrow").style.visibility = "hidden"
@@ -75,11 +77,13 @@ function learn(subject, lesson){
 				if (document.getElementById("lessontextbox").innerText == text) {
 					globalThis.writingstate = 0
 				}
+
+				console.log(globalThis.writingstate)
 			},100)
 			function main(counter) {
 				var i = counter
 				if (i < text.length) {
-				document.getElementById("lessontextbox").innerHTML += text[i]
+				document.getElementById("lessontextbox").textContent += text[i]
 				var i = i + 1
 				yuyospriteflip()
 				setTimeout(function(){main(i)}, 50)
@@ -97,7 +101,7 @@ function learn(subject, lesson){
 		function increasePage(){
 			if (writingstate == 1) {return}
 			if (current + 1 > data.length-1) {return}
-			document.getElementById("lessontextbox").innerText = ""
+			document.getElementById("lessontextbox").textContent = ""
 			globalThis.current =  current + 1
 			yuyospeak(data[current])
 		}
@@ -105,7 +109,7 @@ function learn(subject, lesson){
 		function decreasePage(){
 			if (writingstate == 1) {return}	
 			if (current - 1 < 0) {return}
-			document.getElementById("lessontextbox").innerText = ""
+			document.getElementById("lessontextbox").textContent = ""
 			globalThis.current =  current - 1
 			yuyospeak(data[current])
 		}

@@ -147,14 +147,15 @@ img,p,a{
 	left:10%;
 	
 	font-family: main;
+	white-space: pre;
 	user-select: none;
 	-webkit-user-drag: none;
 	font-size: 50px;
     letter-spacing: 5px;
 	line-height: 80px;
 	padding: 40px;
-	padding-top: 20px;
-	padding-right: 20px;
+	padding-top: 25px;
+	padding-right: 25px;
 	overflow: scroll;
 	overflow-x: hidden;
 }
