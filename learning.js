@@ -59,9 +59,10 @@ function learn(subject, lesson){
 
 		}
 
-		function yuyospeak(text) {
+		function yuyospeak() {
 			yuyospriteflip()
 			var i = 0
+			var text = data[current]
 			var text = text.replaceAll(" "," ")
 			var text = text.replaceAll("#","\\r\\n ")
 			globalThis.writingstate = 1
@@ -77,10 +78,9 @@ function learn(subject, lesson){
 				document.getElementById("lessontextbox").addEventListener("click", function(){
 					globalThis.halt = true
 					document.getElementById("lessontextbox").textContent = ""
-					document.getElementById("lessontextbox").textContent = text
+					document.getElementById("lessontextbox").textContent = data[current]
 					globalThis.writingstate = 0
 					document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo0.png"
-					globalThis.halt = false
 				})
 
 				if (document.getElementById("lessontextbox").textContent == text) {
@@ -90,12 +90,14 @@ function learn(subject, lesson){
 			},100)
 			function main(counter) {
 				if (halt) {return}
+				else {
 				yuyospriteflip()
 				var i = counter
 				if (i < text.length) {
 				document.getElementById("lessontextbox").textContent += text[i]
 				var i = i + 1
 				setTimeout(function(){main(i)}, 75)
+				}
 				} 
 			}
 			main(i)
@@ -103,23 +105,25 @@ function learn(subject, lesson){
 
 		//program start wait
 		setTimeout(function(){
-			yuyospeak(data[current])
+			yuyospeak()
 		},2500)
 
 		function increasePage(){
+			globalThis.halt = false
 			if (writingstate == 1) {return}
 			if (current + 1 > data.length-1) {return}
 			document.getElementById("lessontextbox").textContent = ""
 			globalThis.current =  current + 1
-			yuyospeak(data[current])
+			yuyospeak()
 		}
 
 		function decreasePage(){
+			globalThis.halt = false
 			if (writingstate == 1) {return}	
 			if (current - 1 < 0) {return}
 			document.getElementById("lessontextbox").textContent = ""
 			globalThis.current =  current - 1
-			yuyospeak(data[current])
+			yuyospeak()
 		}
 
 	</script>
