@@ -81,7 +81,6 @@ function learn(subject, lesson){
 					globalThis.writingstate = 0
 					document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo0.png"
 					globalThis.halt = false
-					return
 				})
 
 				if (document.getElementById("lessontextbox").textContent == text) {
