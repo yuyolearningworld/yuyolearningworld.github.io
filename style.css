@@ -138,11 +138,11 @@ img,p,a{
 
 #lessontextbox{
 	width:200vw;
-	height:180vh;
+	height:800px;
 	margin: 10px;
 	position: absolute;
 	outline: 1px solid black;
-	top: 10%;
+	top: 40%;
 	left:10%;
 	
 	font-family: main;
@@ -150,8 +150,22 @@ img,p,a{
 	-webkit-user-drag: none;
 	font-size: 50px;
     letter-spacing: 5px;
-	text-indent: 20px;
-	
+	line-height: 80px;
+	padding: 40px;
+	padding-top: 20px;
+	padding-right: 20px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+#lessontextbox::-webkit-scrollbar {
+	width: 15px;
+	background: transparent;
+}
+
+#lessontextbox::-webkit-scrollbar-thumb{
+	background: #000000;
+	border-radius: 15px;
 }
 
 #lessontitle{
@@ -165,6 +179,17 @@ img,p,a{
 	
     font-size: 100px;
     letter-spacing: 5px;
+}
+
+#learningyuyo{
+	width:500px;
+	height:500px;
+	position: absolute;
+  	left: 50%;
+	top: 18%;
+  	transform: translate(-50%, 0%);
+
+	
 }
 
 /*///////////////////////////////////////////////////////
