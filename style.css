@@ -219,9 +219,27 @@ html::-webkit-scrollbar {
 //////////////////// koikoi.html ////////////////////////
 ///////////////////////////////////////////////////////*/
 
+#fullscreen {
+	z-index: 10;
+	width: 120%;
+	height: 120%;
+	background-color: white;
+}
+
+#gamearea{
+	width:225vw;
+	height:2000px;
+	margin: 10px;
+	position: absolute;
+	outline: 10px solid black;
+	top: 15%;
+	left:5%;
+}
+
 #yuyohandgroup{
 	position:absolute;
-	top:50%;
+	top:400px;
+	left: 80%;
 }
 #yuyohand{
 	position:absolute;
@@ -240,23 +258,30 @@ html::-webkit-scrollbar {
 	rotate: -15deg;
 	left:100px;
 	top:130px;
-	width:90px;
+	width:100px;
 }
 #card2{
 	position:absolute;
 	z-index: 4;
 	rotate: 0deg;
-	left:130px;
+	left:140px;
 	top:130px;
-	width:90px;
+	width:100px;
 }
 #card3{
 	position:absolute;
 	z-index: 3;
 	rotate: 15deg;
-	left:160px;
+	left:180px;
 	top:130px;
-	width:90px;
+	width:100px;
+}
+
+#card{
+	position:absolute;
+	top:30%;
+	left:30%;
+	outline: 10px solid #D82120;
 }
 
 /*///////////////////////////////////////////////////////
