@@ -219,6 +219,46 @@ html::-webkit-scrollbar {
 //////////////////// koikoi.html ////////////////////////
 ///////////////////////////////////////////////////////*/
 
+#yuyohandgroup{
+	position:absolute;
+	top:50%;
+}
+#yuyohand{
+	position:absolute;
+	top:160px;
+	z-index: 2;
+}
+#koikoiyuyo{
+	position:absolute;
+	left:120px;
+	z-index: 0;
+}
+
+#card1{
+	position:absolute;
+	z-index: 5;
+	rotate: -15deg;
+	left:100px;
+	top:130px;
+	width:90px;
+}
+#card2{
+	position:absolute;
+	z-index: 4;
+	rotate: 0deg;
+	left:130px;
+	top:130px;
+	width:90px;
+}
+#card3{
+	position:absolute;
+	z-index: 3;
+	rotate: 15deg;
+	left:160px;
+	top:130px;
+	width:90px;
+}
+
 /*///////////////////////////////////////////////////////
 //////////////////// settings.html //////////////////////
 ///////////////////////////////////////////////////////*/
