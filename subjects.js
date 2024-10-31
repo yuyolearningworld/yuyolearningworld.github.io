@@ -25,7 +25,7 @@ function dropdown() {
 	var subject_element = document.getElementById(current_id)
 	var subjectnum = Number(current_id.replace("subject",""))
 	var stateIndex = subjectnum-1
-	const subjectMax = 30
+	const subjectMax = 50
 	for (i=1; i < subjectMax; i++){
 		var current_element = document.getElementById(current_id + "_lesson" + i)
 		if (current_element == null){

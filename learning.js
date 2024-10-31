@@ -13,7 +13,7 @@ function learn(subject, lesson){
 	for (i=1; i<totalitems.length; i++){
 		pageContents.push('"' + response[currentdata]["page" + i] + '"')
 	}
-	setTimeout(function(){var lessonhtml = window.open("lesson.html")
+	setTimeout(function(){var lessonhtml = window.open(". . .", ". . .")
 	var html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +31,8 @@ function learn(subject, lesson){
 	<script src="learning.js"></script>
 
 	<p id="lessontitle">` + title + `</p>
+
+	<div id="lessonexit" onclick="exitToMain()">Leave lesson</div>
 
 	<div id="lessontextbox"></div>
 	<img id="learningyuyo" src="yuyo_sprites\\yuyo0.png">
@@ -63,8 +65,8 @@ function learn(subject, lesson){
 			yuyospriteflip()
 			var i = 0
 			var text = data[current]
+			var text = text.replaceAll("_","\\r\\n ")
 			var text = text.replaceAll(" "," ")
-			var text = text.replaceAll("#","\\r\\n ")
 			globalThis.writingstate = 1
 			setInterval(function(){
 				if (current == 0) {
@@ -78,7 +80,7 @@ function learn(subject, lesson){
 				document.getElementById("lessontextbox").addEventListener("click", function(){
 					globalThis.halt = true
 					document.getElementById("lessontextbox").textContent = ""
-					document.getElementById("lessontextbox").textContent = data[current]
+					document.getElementById("lessontextbox").textContent = data[current].replaceAll("_","\\r\\n ").replaceAll(" "," ")
 					globalThis.writingstate = 0
 					document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo0.png"
 				})
@@ -96,7 +98,7 @@ function learn(subject, lesson){
 				if (i < text.length) {
 				document.getElementById("lessontextbox").textContent += text[i]
 				var i = i + 1
-				setTimeout(function(){main(i)}, 75)
+				setTimeout(function(){main(i)}, 50)
 				}
 				} 
 			}
@@ -126,6 +128,12 @@ function learn(subject, lesson){
 			yuyospeak()
 		}
 
+		function exitToMain(){
+			document.getElementById("animation_frame").style.animationName = "pagechange_left"
+			document.getElementById("animation_frame").style.animationDuration = "2s"
+			document.getElementById("animation_frame").style.animationFillMode = "forwards"
+			setTimeout(function(){window.close()},2000)
+		}
 	</script>
 
 	

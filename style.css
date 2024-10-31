@@ -82,7 +82,7 @@ img,p,a{
 
 .subjecttext:hover{
     cursor:pointer;
-	font-weight: bold
+	font-weight: bold;
 }
 
 .lessontext{
@@ -99,16 +99,13 @@ img,p,a{
 }
 
 .learntext{
-	margin-left:200px;
-}
-
-.quiztext{
-	margin-left:100px;
+	margin-left:150px;
+	outline: 4px solid black;
 }
 
 .learntext:hover, .quiztext:hover{
 	cursor:pointer;
-	text-decoration: underline;
+	font-weight: bold;
 }
 
 /*///////////////////////////////////////////////////////
@@ -192,8 +189,22 @@ img,p,a{
   	left: 50%;
 	top: 18%;
   	transform: translate(-50%, 0%);
+}
 
-	
+#lessonexit{
+	font-family: main;
+	width:min-content;
+	min-width: auto;
+	padding:10px;
+	user-select: none;
+	-webkit-user-drag: none;
+	font-size: 50px;
+    letter-spacing: 5px;
+}
+
+#lessonexit:hover{
+	cursor: pointer;
+	outline: 1px solid black;
 }
 
 /*///////////////////////////////////////////////////////
