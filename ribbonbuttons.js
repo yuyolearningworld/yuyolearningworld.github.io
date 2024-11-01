@@ -6,7 +6,10 @@ function subjectpress(){
 }
 
 function koikoipress(){
-    window.open('koikoi.html', 'KoiKoi','resizable=0,width=1000,height=700')
+    var koikoi = window.open('koikoi.html', 'KoiKoi','resizable=0,width=1000,height=700')
+    koikoi.addEventListener("resize", function(){
+        koikoi.resizeTo(1016, 774);
+    })
 }
 
 function settingspress(){
