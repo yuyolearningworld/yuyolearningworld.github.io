@@ -6,13 +6,7 @@ function subjectpress(){
 }
 
 function koikoipress(){
-    var w = 1000
-    var h = 700
-    var koikoi = window.open('koikoi.html', 'KoiKoi','resizable=0,width='+w+',height='+h+'')
-    koikoi.addEventListener("resize", () => {
-        koikoi.resizeTo(w, h);
-    })
-
+    window.open('koikoi.html', 'KoiKoi','resizable=0,width=1000,height=700')
 }
 
 function settingspress(){
