@@ -42,3 +42,7 @@ img{
    from {left: 110%;}
    to {left: -50%;}
 }
+
+@media only screen and (max-width: 600px) {
+    html {width:600px}
+}
