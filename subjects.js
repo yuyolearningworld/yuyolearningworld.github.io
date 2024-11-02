@@ -74,18 +74,6 @@ LESSONCONTENTS = [
 
 createHTML()
 
-import { writeFile } from 'fs'
-
-// Data which will write in a file.
-let data = "Learning how to write in a file."
-
-// Write data in 'Output.txt' .
-writeFile('lessons.json', data, (err) => {
-
-    if (err) throw err;
-})
-
-
 function writePages(content){
 	var errormsg = "There has been an error with this lesson"
 	if (LESSONCONTENTS[content] == undefined) {return `"page1":"${errormsg}"
