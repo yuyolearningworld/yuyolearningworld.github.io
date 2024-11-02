@@ -43,6 +43,6 @@ img{
    to {left: -110%;}
 }
 
-@media only screen and (max-width: 600px) {
-    html {width:600px}
+@media screen and (max-width: 600px) {
+    html {width:300px}
 }
