@@ -6,7 +6,7 @@ function learn(subject, lesson){
 	fetch('./lessons.json')
 		.then(response => response.json())
 		.then(response => {
-	currentdata = "__" + subject + lesson + "__"
+	currentdata = `S${subject}_L${lesson}`
 	var totalitems = Object.keys(response[currentdata])
 	var title = response[currentdata]["title"]
 	var pageContents = []
@@ -51,12 +51,14 @@ function learn(subject, lesson){
 		
 
 		function yuyospriteflip(){
-			if (spritestate == 1) {
+			if (globalThis.spritestate == 1) {
 				document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo0.png"
 				globalThis.spritestate = 0
+				return
 			} else { 
 				document.getElementById("learningyuyo").src = "yuyo_sprites\\\\yuyo1.png"
 				globalThis.spritestate = 1
+				return
 			}
 
 		}
