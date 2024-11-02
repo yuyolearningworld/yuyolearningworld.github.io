@@ -2,6 +2,7 @@ html {
 	overflow-x: hidden;
 	zoom:40%;
 	width:5000px;
+	background-color: white;
 }
 
 img,p,a{
@@ -384,10 +385,14 @@ div{
 
 @keyframes pagechange_left {
     from {left:130%;}
-    to {left:-40%;}
+    to {left:-600px;}
 }
 
 @keyframes pagechange_right {
-    from {left:-40%;}
+    from {left:-600px;}
     to {left:130%;}
+}
+
+@media (pointer:none), (pointer:coarse){
+	html{visibility: hidden;}
 }
