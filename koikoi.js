@@ -113,18 +113,19 @@ function setupcards() {
     for (i=1; i<=4; i++){
         var tablecardIndex = Math.floor(Math.random() * Number(allcards.length))
         console.log(tablecardIndex)
-        addImage("table1-" + i,allcards[tablecardIndex])}
+        addImage("table1-" + i,allcards[tablecardIndex])
         allcards.pop(tablecardIndex)
-
+    }
     for (i=1; i<=4; i++){
         var tablecardIndex = Math.floor(Math.random() * Number(allcards.length))
         console.log(tablecardIndex)
-        addImage("table2-" + i,allcards[tablecardIndex])}
+        addImage("table2-" + i,allcards[tablecardIndex])
         allcards.pop(tablecardIndex)
-        for (i=1; i<=8; i++){
-            var playercardIndex = Math.floor(Math.random() * Number(allcards.length))
-            addImage("handcard" + i,allcards[playercardIndex])
-            allcards.pop(tablecardIndex)
-        }
+    }
+    for (i=1; i<=8; i++){
+        var playercardIndex = Math.floor(Math.random() * Number(allcards.length))
+        addImage("handcard" + i,allcards[playercardIndex])
+        allcards.pop(tablecardIndex)
+    }
 }
 setupcards()
