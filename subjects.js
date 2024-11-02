@@ -23,7 +23,7 @@ SUBJECTSLESSONS = {
 "> Subject 2 - Hiragana":{"1":"What is Hiragana?", "2":"a,i,u,e,o and n", "3":"ka,ki,ku,ke,ko", "4":"sa,si,su,se,so", "5":"ta,ti,tu,te,to", "6":"na,ni,nu,ne,no", "7":"ha,hi,hu,he,ho", "8":"ma,mi,mu,me,mo", "9":"ya,yu,yo", "10":"ra,ri,ru,re,ro", "11":"wa,wo"},
 "> Subject 3 - Katakana":{"1":"What is Katakana?", "2":'The Long Sound', "3":"a,i,u,e,o and n", "4":"ka,ki,ku,ke,ko", "5":"sa,si,su,se,so", "6":"ta,ti,tu,te,to", "7":"na,ni,nu,ne,no", "8":"ha,hi,hu,he,ho", "9":"ma,mi,mu,me,mo", "10":"ya,yu,yo", "11":"ra,ri,ru,re,ro", "12":"wa,wo"},
 "> Subject 4 - Daily words":{"1":"Greetings and Goodbyes", "2":"Directions", "3":"Giving and wanting", "4":"Basic objects and numbers"},
-"> Subject 5 - N-level intro":{"1":"What are N-Levels?", "2":"Why are they important?", "3":'What is 「Grammar」 and 「Kanji」?'},
+"> Subject 5 - N-level intro":{"1":"What are N-Levels?", "2":"Why are they important?", "3":'What is `Grammar` and `Kanji` ?'},
 "> Subject 6 - N5 Grammar":{},
 "> Subject 7 - N5 Kanji":{},
 "> Subject 8 - N4 Grammar":{},
@@ -37,12 +37,53 @@ SUBJECTSLESSONS = {
 }
 
 LESSONCONTENTS = [
-	["test1","test2","test3","test4","test5"],
-	["hello1","hello2","hello3"]
+	["1"],
+	["2"],
+	["3"],
+	["4"],
+	["5"],
+	["6"],
+	["7"],
+	["8"],
+	["9"],
+	["10"],
+	["11"],
+	["12"],
+	["13"],
+	["14"],
+	["15"],
+	["16"],
+	["17"],
+	["18"],
+	["19"],
+	["20"],
+	["21"],
+	["22"],
+	["23"],
+	["24"],
+	["25"],
+	["26"],
+	["27"],
+	["28"],
+	["29"],
+	["30"],
+	["31"],
+	["32"],
+	["33"],
 ]
 
 createHTML()
-console.log(createJSON())
+
+import { writeFile } from 'fs'
+
+// Data which will write in a file.
+let data = "Learning how to write in a file."
+
+// Write data in 'Output.txt' .
+writeFile('lessons.json', data, (err) => {
+
+    if (err) throw err;
+})
 
 
 function writePages(content){
@@ -53,11 +94,11 @@ function writePages(content){
 	var result = ``
 	var counter = 0
 	while (counter < LESSONCONTENTS[content].length) {
-		var result = result + `"page${i+1}":"${LESSONCONTENTS[content][i]}",
+		var result = result + `"page${counter+1}":"${LESSONCONTENTS[content][counter]}",
 	`
 		counter++
 	}
-	var result = result.substring(0,result.length-1)
+	var result = result.substring(0,result.length-3)
 	return result
 }
 function createJSON() {
@@ -80,14 +121,14 @@ function createJSON() {
 		for (l=0; l<count; l++) {
 			counttotal += 1
 			jsonresult += `"S${String(i+1)}_L${String(l+1)}":{
-	"title":"${lessons[counttotal]}",
+	"title":"${lessons[counttotal-1]}",
 	${writePages(counttotal-1)}},
 `
 		}
 	}
 	var result = JSON.parse(`{
 		` + jsonresult.substring(0,jsonresult.length-2) + `
-	}`)
+}`)
 	return result
 }
 
