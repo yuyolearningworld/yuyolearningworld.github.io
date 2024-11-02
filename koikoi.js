@@ -9,10 +9,11 @@ for (i=0; i<MONTHS.length; i++) {
         allcards.push(MONTHS[i]+String(i2))
     }
 }
+ALLCARDS = allcards
 
 // catagories
 plains = ["Jan1","Jan2","Feb1","Feb2","Mar1","Mar2","Apr1","Apr2","May1","May2","Jun1","Jun2","Jul1","Jul2","Aug1","Aug2","Sep1","Sep2","Oct1","Oct2","Nov1","Dec1","Dec2","Dec3"]
-animals = ["Feb4","Apr4","Jun4","Jul4","Aug3","Sep4","Oct4","Nov3"]
+animals = ["Feb4","Apr4","May4","Jun4","Jul4","Aug3","Sep4","Oct4","Nov3"]
 ribbons = ["Jan3","Feb3","Mar3","Apr3","May3","Jun3","Jul3","Sep3", "Oct3","Nov2"]
 brights = ["Jan4","Mar4","Aug4","Nov4","Dec4"]
 
@@ -49,9 +50,52 @@ Kasu (カス) – 10 Dregs – 1 point
 1 additional point awarded for each extra ‘Dregs’ card
 
 */
-function updateImage(id, cardName){
+function addImage(id, cardName){
     var current = document.getElementById(id)
+    current.style.outline = "1px solid #0e0e0e"
     current.src = window.location.href.replace("koikoi.html","") + "cards/" + cardName + ".png"
 }
+function removeImage(id){
+    var current = document.getElementById(id)
+    current.style.outline = "1px solid #d8d8d8"
+    current.src = window.location.href.replace("koikoi.html","") + "assets/nocard.png"
+}
+function swapImage(id1,id2){
+    var current1 = document.getElementById(id1)
+    var current2 = document.getElementById(id2)
+    var temp = current1.src
+    current1.src = current2.src
+    current2.src = temp
+    if (current1.src == window.location.href.replace("koikoi.html","") + "assets/nocard.png"){
+        current1.style.outline = "1px solid #d8d8d8"
+    } else {current1.style.outline = "1px solid #0e0e0e"}
+    if (current2.src == window.location.href.replace("koikoi.html","") + "assets/nocard.png") {
+        current2.style.outline = "1px solid #d8d8d8"
+    } else {current2.style.outline = "1px solid #0e0e0e"}
+    current.style.outline = "1px solid #d8d8d8"
+    current.src = window.location.href.replace("koikoi.html","") + "assets/nocard.png"
+}
 
-updateImage("cardresult", "Dec2")
+
+
+playercards = []
+playersets = []
+
+yuyocards = []
+yuyosets = []
+
+function setupcards() {
+    for (i=1; i<=4; i++){
+        var tablecardIndex = Math.floor(Math.random() * Number(ALLCARDS.length)+1)
+        addImage("table1-" + i,ALLCARDS[tablecardIndex])}
+    for (i=1; i<=4; i++){
+        var tablecardIndex = Math.floor(Math.random() * Number(ALLCARDS.length)+1)
+        addImage("table2-" + i,ALLCARDS[tablecardIndex])}
+        for (i=1; i<=8; i++){
+            var playercardIndex = Math.floor(Math.random() * Number(ALLCARDS.length)+1)
+            addImage("handcard" + i,ALLCARDS[playercardIndex])
+        }
+}
+
+addImage("table1-1", "Jan1")
+swapImage("table1-1","table2-1")

@@ -219,7 +219,7 @@ html::-webkit-scrollbar {
 //////////////////// koikoi.html ////////////////////////
 ///////////////////////////////////////////////////////*/
 
-img,div{
+div{
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -298,15 +298,15 @@ img,div{
 	width: 1300px;
 	height: 450px;
 	top: 1275px;
-	left:1175px;
+	left:1155px;
 	display: grid;
 	grid-template-columns: 125px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
 	grid-template-rows: 100px 100px 100px 100px;
 }
 .setcards{
-	outline:1px solid #0e0e0e;
 	height: 72px;
 	width: 42px;
+	outline: 1px solid #d8d8d8
 }
 .typetext{
 	font-family: main;
@@ -328,16 +328,11 @@ img,div{
 	position: absolute;
 	top: 0;
 	left: 0;
-	outline:1px solid #0e0e0e;
+	outline: 1px solid #0e0e0e
 }
 
 #cardresult{
 	z-index: 2;
-	/*transform: rotate3d(1, 1, 0, -90deg);*/
-	animation-name: fadeup;
-	animation-duration: 1s;
-	animation-delay: 1s;
-	animation-fill-mode: forwards;
 }
 
 @keyframes flip{
@@ -362,22 +357,20 @@ img,div{
 	top: 500px;
 	left:350px;
 	padding:30px;
-	background: rgba(0,0,0,0.1);
 	display: grid;
   	grid-template-columns: var(--gap) var(--gap) var(--gap) var(--gap) var(--gap) var(--gap) var(--gap) var(--gap) var(--gap);
 	grid-template-rows: 330px 330px;
 }
 .card{
-	outline:1px solid #0e0e0e;
 	height: 257px;
 	width: 150px;
+	outline: 1px solid #d8d8d8
 }
-.statcards{
-	outline:1px solid #0e0e0e;
+.yourcards{
 	height: 192px;
 	width: 112px;
+	outline: 1px solid #d8d8d8
 }
-
 
 
 /*///////////////////////////////////////////////////////
