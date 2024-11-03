@@ -394,5 +394,11 @@ div{
 }
 
 @media (pointer:none), (pointer:coarse){
-	html{visibility: hidden;}
+	*{
+		display: none;
+		margin: 0;
+		height: 0px;
+		width: 0px;
+		overflow: hidden
+	}
 }
