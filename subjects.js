@@ -1,22 +1,6 @@
 // false = drop down closed
 // true = drop down open
 // reference = index + 1 e.g. subject1 = state[0]
-state = [
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-    [false],
-]
 
 SUBJECTSLESSONS = {
 "> Subject 1 - Romaji":{"1":"Introduction to Yuyo Learning World", "2":"What is romaji?", "3":"Why is Romaji useful?"},
@@ -72,6 +56,7 @@ LESSONCONTENTS = [
 	["33"],
 ]
 
+writeToFile()
 createHTML()
 
 function writePages(content){
@@ -120,6 +105,12 @@ function createJSON() {
 	return result
 }
 
+function writeToFile(){
+	var fs = require('fs');
+	fs.readFile("test.txt",function(err, data){
+		console.log(data)
+	})
+}
 
 
 function createHTML(){
@@ -134,6 +125,22 @@ function createHTML(){
 	}
 }
 
+state = [
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+    [false],
+]
 
 function dropdown() {
     var current_id= event.srcElement.id

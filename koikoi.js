@@ -75,57 +75,60 @@ function handswap(id){
     
 }
 
+// image handling functions
+
 function addImage(id, cardName){
     var current = document.getElementById(id)
     current.style.outline = "1px solid #0e0e0e"
     current.src = window.location.href.replace("koikoi.html","") + "cards/" + cardName + ".png"
-    current.addEventListener("click", function(){handswap(id)})
+    //current.addEventListener("click", function(){handCompare(id)})
 }
 function removeImage(id){
     var current = document.getElementById(id)
     current.style.outline = "1px solid #d8d8d8"
     current.src = window.location.href.replace("koikoi.html","") + "assets/nocard.png"
 }
-function swapImage(id1,id2){
-    var current1 = document.getElementById(id1)
-    var current2 = document.getElementById(id2)
-    var temp = current1.src
-    current1.src = current2.src
-    current2.src = temp
-    if (current1.src == window.location.href.replace("koikoi.html","") + "assets/nocard.png"){
-        current1.style.outline = "1px solid #d8d8d8"
-    } else {current1.style.outline = "1px solid #0e0e0e"}
-    if (current2.src == window.location.href.replace("koikoi.html","") + "assets/nocard.png") {
-        current2.style.outline = "1px solid #d8d8d8"
-    } else {current2.style.outline = "1px solid #0e0e0e"}
-}
 
 
+//player 2 is yuyo
+var player1cards = []
+var player1sets = []
+var player2cards = []
+var player2sets = []
 
-playercards = []
-playersets = []
+// game handling functions
 
-yuyocards = []
-yuyosets = []
+function getRandomCard(){}
+function addToHand(card){}
+function removeFromHand(pos){}
+function addToTable(pos,card){}
+function removeFromTable(pos){}
+function addToSets(type,card){}
+function checkSets(){}
+function drawFromDeck(playerTo){}
+
+// game functions
 
 function setupcards() {
-
     for (i=1; i<=4; i++){
         var tablecardIndex = Math.floor(Math.random() * Number(allcards.length))
-        console.log(tablecardIndex)
         addImage("table1-" + i,allcards[tablecardIndex])
-        allcards.pop(tablecardIndex)
+        globalThis.allcards.pop(tablecardIndex)
+        console.log(globalThis.allcards)
+
     }
     for (i=1; i<=4; i++){
         var tablecardIndex = Math.floor(Math.random() * Number(allcards.length))
-        console.log(tablecardIndex)
         addImage("table2-" + i,allcards[tablecardIndex])
-        allcards.pop(tablecardIndex)
+        globalThis.allcards.pop(tablecardIndex)
+        console.log(globalThis.allcards)
     }
     for (i=1; i<=8; i++){
         var playercardIndex = Math.floor(Math.random() * Number(allcards.length))
         addImage("handcard" + i,allcards[playercardIndex])
-        allcards.pop(tablecardIndex)
+        globalThis.player1cards.push(allcards[playercardIndex])
+        globalThis.allcards.pop(tablecardIndex)
     }
+    console.log(player1cards)
 }
 setupcards()
