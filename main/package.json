@@ -1,0 +1,17 @@
+{
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "requirejs": "^2.3.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}
