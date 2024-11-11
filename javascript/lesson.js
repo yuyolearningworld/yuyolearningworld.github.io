@@ -96,14 +96,14 @@ function yuyospriteflip(){
 
 function yuyonoise(){
 	var random = Math.round(Math.random()*4)+1
-	var click = new Audio(`../misc/sounds/yuyotone${random}.mp3`);
-	click.play();
+	var beep = new Audio(`../misc/sounds/yuyotone${random}.mp3`);
+	beep.volume = 0.5
+	beep.play();
 }
 
 
 
 function yuyospeak() {
-	
 	yuyospriteflip()
 	var i = 0
 	var text = data[current]
