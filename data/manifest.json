@@ -1,0 +1,20 @@
+{
+    "name": "YUYO LEARNING WORLD",
+    "icons": [
+      {
+        "src": "../misc/logo/logo512x512.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "../misc/logo/logo512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "../index.html",
+    "display_override": ["window-controls-overlay"],
+    "display": "fullscreen",
+    "prefer_related_applications": false,
+    "theme_color": "white"
+  }

@@ -1,0 +1,46 @@
+html {
+    overflow: hidden;
+}
+
+img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#logo{
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 30%;
+    margin: auto;
+    zoom:100%;
+	z-index:-10;
+    animation-name: logo_rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out
+}
+
+#transition{
+	position: absolute;
+    left: 110%;
+	zoom:75%;
+    top: -20px;
+	animation-name: transition;
+	animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes logo_rotate {
+   from {rotate: -5deg;}
+   to {rotate: 5deg;}
+}
+
+@keyframes transition {
+   from {left: 130%;}
+   to {left: -600px;}
+}
+/* transform:matrix(1,0,0.5,1,0,0) */

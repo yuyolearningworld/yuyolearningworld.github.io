@@ -1,0 +1,87 @@
+{
+    "> Subject 1 - Romaji":{
+        "Introduction to Yuyo Learning World":[ "hello and welcome to yuyo learning world", "test1", "test1", "test1"],
+        "What is romaji?":[ "test1", "test2", "test3", "test4"],
+        "Quick punctuation lesson":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 2 - Hiragana":{
+        "What is Hiragana?":[ "test1", "test2", "test3", "test4"],
+        "a,i,u,e,o and n":[ "test1", "test2", "test3", "test4"],
+        "ka,ki,ku,ke,ko":[ "test1", "test2", "test3", "test4"],
+        "sa,si,su,se,so":[ "test1", "test2", "test3", "test4"],
+        "ta,ti,tu,te,to":[ "test1", "test2", "test3", "test4"],
+        "na,ni,nu,ne,no":[ "test1", "test2", "test3", "test4"],
+        "ha,hi,hu,he,ho":[ "test1", "test2", "test3", "test4"],
+        "ma,mi,mu,me,mo":[ "test1", "test2", "test3", "test4"],
+        "ya,yu,yo":[ "test1", "test2", "test3", "test4"],
+        "ra,ri,ru,re,ro":[ "test1", "test2", "test3", "test4"],
+        "wa,wo":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 3 - Katakana":{
+        "What is Katakana?":[ "test1", "test2", "test3", "test4"],
+        "a,i,u,e,o and n":[ "test1", "test2", "test3", "test4"],
+        "ka,ki,ku,ke,ko":[ "test1", "test2", "test3", "test4"],
+        "sa,si,su,se,so":[ "test1", "test2", "test3", "test4"],
+        "ta,ti,tu,te,to":[ "test1", "test2", "test3", "test4"],
+        "na,ni,nu,ne,no":[ "test1", "test2", "test3", "test4"],
+        "ha,hi,hu,he,ho":[ "test1", "test2", "test3", "test4"],
+        "ma,mi,mu,me,mo":[ "test1", "test2", "test3", "test4"],
+        "ya,yu,yo":[ "test1", "test2", "test3", "test4"],
+        "ra,ri,ru,re,ro":[ "test1", "test2", "test3", "test4"],
+        "wa,wo":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 4 - Daily words":{
+        "Greetings and Goodbyes":[ "test1", "test2", "test3", "test4"],
+        "Small talk":[ "test1", "test2", "test3", "test4"],
+        "Directions":[ "test1", "test2", "test3", "test4"],
+        "Giving and wanting":[ "test1", "test2", "test3", "test4"],
+        "Basic objects and numbers":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 5 - N-level intro":{
+        "What are N-Levels?":[ "test1", "test2", "test3", "test4"],
+        "Why are they important?":[ "test1", "test2", "test3", "test4"],
+        "What is `Grammar`, `Kanji` and `Vocabulary`?":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 6 - N5 Grammar":{
+        "lesson21":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 7 - N5 Kanji":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 8 - N5 Vocabulary":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 9 - N4 Grammar":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 10 - N4 Kanji":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 11 - N4 Vocabulary":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 12 - N3 Grammar":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 13 - N3 Kanji":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 14 - N3 Vocabulary":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 15 - N2 Grammar":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 16 - N2 Kanji":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 17 - N2 Vocabulary":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 18 - N1 Grammar":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    },
+    "> Subject 19 - N1 Kanji":{
+        "blank":[ "test1", "test2", "test3", "test4"]
+    }
+}
