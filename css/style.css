@@ -36,6 +36,7 @@ html::-webkit-scrollbar {
 	position: fixed;
 	display: inline-grid;
     grid: auto / auto auto auto auto;
+
     gap:clamp(15px,5vw,200px);
     outline-color: black;
     outline-width: 1px;
@@ -501,11 +502,11 @@ div{
 }
 
 @keyframes pagechange_left {
-    from {left:130%;}
-    to {left:-600px;}
+    from {left:140vw;}
+    to {left:-40vw;}
 }
 
 @keyframes pagechange_right {
-    from {left:-600px;}
-    to {left:130%;}
+    from {left:-40vw;}
+    to {left:140vw;}
 }
