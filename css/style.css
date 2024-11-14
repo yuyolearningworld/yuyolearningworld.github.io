@@ -71,7 +71,7 @@ html::-webkit-scrollbar {
 ///////////////////////////////////////////////////////*/
 
 #subjectarea{
-	top:clamp(65px,10vw,125px);
+	top:clamp(35px,10vw,95px);
 	position: absolute;
 }
 
