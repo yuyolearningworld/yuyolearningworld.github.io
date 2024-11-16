@@ -18,7 +18,7 @@ var HTML = `
 
 	<p id="lessontitle"> </p>
 
-	<div id="lessonexit" onclick="exitToMain()">Leave lesson</div>
+	<p id="lessonexit" onclick="exitToMain()">Click here to go back to subjects</p>
 
 	<div id="lessontextbox"></div>
 	<img id="learningyuyo" src="../misc/sprites/yuyo0.png">
@@ -54,7 +54,7 @@ function startLesson(id){
 		getData(subjectNum, lessonNum)
 		setTimeout(function(){
 			yuyospeak()
-		}, 1500)
+		}, 2000)
 	},2500)
 }
 
@@ -97,7 +97,6 @@ function yuyospriteflip(){
 function yuyonoise(){
 	var random = Math.round(Math.random()*4)+1
 	var beep = new Audio(`../misc/sounds/yuyotone${random}.mp3`);
-	beep.volume = 0.5
 	beep.play();
 }
 

@@ -29,7 +29,7 @@ function musicpress(){
     var y = window.screen.height
     var x = window.screen.width
     setTimeout(function(){
-        musicwindow = window.open("music.html", "yuyo Music Player", `height=500px, width=350px, top=${(y-500)/2}, left=${(x-350)/2}`)
+        musicwindow = window.open("music.html", "yuyo Music Player", `height=550px, width=400px, top=${(y-500)/2}, left=${(x-350)/2}`)
     },100)
     var click = new Audio('../misc/sounds/click.mp3');
     click.play();

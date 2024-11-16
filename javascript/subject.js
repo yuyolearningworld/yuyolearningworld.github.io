@@ -34,20 +34,12 @@ fetch("../data/data.json", {method: 'GET'})
         <img onclick="musicpress()" id="settings" src="../misc/assets/music.png">
     </div>
     <img id="ribbon_underline" src="../misc/assets/ribbon_underline.png">
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <script src="../javascript/dropdown.js"></script>
 
     <script src="../javascript/lesson.js"></script>
+
+    <div id="subjectarea">
 
         `)
     for (i1=0; i1<subject.length; i1++){
@@ -57,6 +49,7 @@ fetch("../data/data.json", {method: 'GET'})
 <a class="learntext" id="subject${i1+1}_lesson${i2+1}" onclick="startLesson(this.id)">Start Lesson </a> </p>`)
         }
     }
+    document.write("</div>")
     document.close()
 })
 

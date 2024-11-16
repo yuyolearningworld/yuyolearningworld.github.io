@@ -8,21 +8,42 @@
     <link rel="icon" href="../misc/logo/logo30x30.png">
 </head>
 <body>
-    <p id="musicinfo">yuyo has picked out once of his fravorite Japanese Jazz albums for you to listen to whilst you go through his lessons, 
-        <a onclick='window.open("//www.youtube.com/playlist?list=OLAK5uy_kNpV6ArC4kSVrey_e1447h5Xv46DbLNGk")'
-        style="text-decoration: underline; color: blue;">
-            Silent Jazz Case 5" by 島裕介 (Yusuke Shima)
-        </a></p>
-    <img id="albumcover" src="../misc/assets/album.png">
-    <p id="songname"></p>
-    <p id="artistname">島裕介<br>Yusuke Shima</p>
-    <p id="playpause">&#x23F5</p>
-    <p id="newsong">New song?</p>
-    <p id="newsonginfo">you can press "new song?" to play random song from the album</p>
-    <div id="dancingyuyo">
-        <img id="musicyuyo" src="../misc/sprites/yuyo0.png">
-        <img id="headphones" src="../misc/assets/headphone.png">
+
+    <div id="mobileuse">
+        <div id="mobileuse_background"></div>
+        <div id="mobileuse_textbox">
+            <h1>hello,</h1>
+            <p>the music player on mobile may have some bugs and is mainly designed for Laptop and PC use</p>
+            <p>we are sorry for this however you can still use it to see if it is good for you</p>
+            <p>Thanks,</p>
+            <p style="font-size: 25px; margin-top: -20px;">有用 :)</p>
+            <p style="font-size: 12px;">(Press <code>OK</code> to continue)</p>
+            <p id="mobileuse_ok">OK</p>
+        </div>
+        
     </div>
+
+    <img id="dancingyuyo" src="../misc/sprites/dancingyuyo.png">
+    <div id="upper">
+        <p id="musicinfo">yuyo has picked out once of his fravorite Japanese Jazz albums for you to listen to whilst you go through his lessons, 
+            <a onclick='window.open("//www.youtube.com/playlist?list=OLAK5uy_kNpV6ArC4kSVrey_e1447h5Xv46DbLNGk")'
+            style="text-decoration: underline; color: blue;">
+                Silent Jazz Case 5" by 島裕介 (Yusuke Shima)
+            </a>
+        </p>
+    </div>
+
+    <div id="mid">
+        <p id="songname"></p>
+        <p id="artistname">島裕介<br>Yusuke Shima</p>
+    </div>
+
+    <div id="lower">
+        <p id="playpause">&#x23F5</p>
+        <p id="newsong">New song?</p>
+        <p id="newsonginfo">you can press "new song?" to play random song from the album and press the button above the play and pause the music</p>
+    </div>
+
     <script src="../javascript/music.js"></script>
 </body>
 </html>

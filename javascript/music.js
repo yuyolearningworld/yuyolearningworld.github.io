@@ -1,6 +1,6 @@
-window.addEventListener("resize", function(){
-    window.resizeTo("366","574")
-})
+ window.addEventListener("resize", function(){
+     window.resizeTo("416","620")
+ })
 
 const albumsongs = [
     ["index1.mp3","Twenty minutes, let me rest"],
@@ -17,6 +17,15 @@ const albumsongs = [
     ["indexC.mp3","Sunrise on the Bell"]
 ]
 
+document.getElementById("mobileuse_ok").addEventListener("click", function(){
+    var click = new Audio('../misc/sounds/click.mp3');
+    click.play();
+    document.getElementById("mobileuse").style.animationName = "mobilemessagefadeout"
+    document.getElementById("mobileuse").style.animationDelay = "0.5s"
+    document.getElementById("mobileuse").style.animationDuration = "1s"
+    document.getElementById("mobileuse").style.animationFillMode = "forwards"
+})
+
 var albumsong
 var previousRandom
 function setMusic(){
@@ -26,11 +35,19 @@ function setMusic(){
     }}
     previousRandom = random
     albumsong = new Audio('../misc/sounds/album/'+ albumsongs[random][0])
+    albumsong.volume = 0.5
     document.getElementById("songname").innerHTML = albumsongs[random][1]
 }
 setMusic()
 
 var playpause = false
+
+setInterval(function(){
+    if (albumsong.ended) {
+        setMusic()
+        albumsong.play()
+    }
+})
 
 function playpauseFlip(){
     if (playpause == false){
