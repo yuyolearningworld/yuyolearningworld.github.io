@@ -1,12 +1,12 @@
 html {
 	overflow-x: hidden;
-	zoom:40%;
-	width:5000px;
 	background-color: white;
+	cursor: url('../misc/assets/cursor.png'), auto;
 }
 
-img,p,a{
+img,p,a,div,h1{
     font-family: main;
+	letter-spacing: 0.1em;
 	user-select: none;
 	-webkit-user-drag: none;
 }
@@ -15,11 +15,10 @@ img,p,a{
     position: fixed;
     z-index: 20;
     top:-20px;
-    left:-30%;
     animation-name: pagechange_right;
     animation-duration: 4s;
     animation-fill-mode: forwards;
-    zoom:180%;
+	height: 110vh;
 }
 
 html::-webkit-scrollbar {
@@ -34,100 +33,73 @@ html::-webkit-scrollbar {
     src: url("../misc/font/Sylvia_Angel.ttf");
 }
 
-/*///////////////////////////////////////////////////////
-//////////////////// Subject.html ///////////////////////
-///////////////////////////////////////////////////////*/
-
-#logo{
-    z-index: 15;
-}
-
 .grid_ribbon {
     top:5px;
 	position: fixed;
 	display: inline-grid;
     grid: auto / auto auto auto auto;
-    gap:150px;
+    gap:clamp(5px,5vw,200px);
     outline-color: black;
     outline-width: 1px;
     z-index: 15;
 }
 
+#logo{
+	height: clamp(65px,10vw,130px);
+	z-index: 15;
+}
+
 #subjects, #koikoi, #settings{
-    height: 100px;
+    height: clamp(30px,5vw,70px);
     width: auto;
-    padding-top: 40px;
-    padding-bottom: 35px;
+    padding-top: clamp(20px,2.5vw,25px);
     z-index: 15;
     animation-name: duringanimation_page;
     animation-duration: 8s;
 	zoom:90%;
-	cursor:pointer;
 
-}
-
-#subjects:active, #koikoi:active, #settings:active {
-    padding-top: 50px;
-	padding-left: 10px;
-	padding-right: 25px;
-	zoom:80%;
-	cursor:pointer;
 }
 
 #ribbon_underline{
     position: fixed;
-    top: -250px;
-    left:0px;
-    width: 6500px;
+	height: clamp(80px,12vw,145px);
+    width: 105vw;
+	margin:-8px;
     z-index: 14;
 }
 
+/*///////////////////////////////////////////////////////
+//////////////////// Subject.html ///////////////////////
+///////////////////////////////////////////////////////*/
+
 #subjectarea{
+	top:clamp(65px,6vw,125px);
 	position: absolute;
-	top:200px;
 }
 
 .subjecttext{
-	font-size: 50px;
-    letter-spacing: 5px;
-	left:55px;
-	margin-top:100px;
-	width:810px;
-	padding:10px;
-	cursor:pointer;
-}
-
-.subjecttext:active{
-    cursor:pointer;
-	padding-top: 18px;
-	padding-left: 30px;
-	padding-bottom: 12px;
-	zoom:95%;
+	font-size: clamp(18px,2vw,25px);
+	text-indent:clamp(0px,1vw,10px);
+	margin-top:clamp(50px,10vw,75px);
 }
 
 .lessontext{
-	font-size: 50px;
-    letter-spacing: 5px;
-	left:55px;
+	font-size: clamp(12px,2vw,20px);
 	width:auto;
-	text-indent: 150px;
-	margin:-20px;
-	margin-top:20px;
-	margin-bottom:40px;
+	text-indent: clamp(20px,2vw,100px);
+	margin-top:clamp(15px,2vw,25px);
+	margin-bottom:clamp(15px,2vw,25px);
 	opacity: 0; 
 	display: none;
 }
 
 .learntext{
-	margin-left:150px;
-	font-weight: bold;
-	cursor:pointer;
-}
-
-.learntext:active, .quiztext:active{
-	cursor:pointer;
-	zoom:95%;
-	padding-left: 20px;
+	font-weight: 600;
+	text-wrap: nowrap;
+	margin-left: clamp(5px,2.5vw,40px);
+	outline: clamp(1px,0.25vw,2px) solid black;
+	padding: clamp(1px,0.25vw,5px);
+	border-radius: clamp(2px,0.25vw,10px);
 }
 
 /*///////////////////////////////////////////////////////
@@ -135,12 +107,8 @@ html::-webkit-scrollbar {
 ///////////////////////////////////////////////////////*/
 
 .arrow {
-	height:150px;
-	margin: 100px;
-}
-
-.arrow:hover{
-	cursor: pointer;
+	width: clamp(60px,8vw,75px);
+	margin: clamp(15px,4vw,25px);
 }
 
 #leftarrow{
@@ -157,76 +125,56 @@ html::-webkit-scrollbar {
 }
 
 #lessontextbox{
-	width:200vw;
-	height:800px;
-	margin: 10px;
+	width:95vw;
+ 	height:clamp(450px,-60vw,600px);
+	left:50%;
+	transform: translate(-50%,0);
+	top: clamp(270px,20vw,425px);
 	position: absolute;
 	outline: 1px solid black;
-	top: 40%;
-	left:8%;
-	
 	font-family: main;
 	white-space: pre-wrap;
 	text-align: center;
 	user-select: none;
 	-webkit-user-drag: none;
-	font-size: 50px;
-    letter-spacing: 5px;
-	line-height: 80px;
-	padding: 40px;
-	padding-top: 25px;
-	padding-right: 25px;
+	font-size: clamp(20px,2vw,30px);
+	line-height: clamp(50px,8vw,70px);
 	overflow-y: scroll;
 	overflow-x: hidden;
 	word-break:keep-all;
 }
 
 #lessontextbox::-webkit-scrollbar {
-	width: 15px;
 	background: transparent;
 }
 
-#lessontextbox::-webkit-scrollbar-thumb{
-	background: #000000;
-	border-radius: 15px;
-}
-
 #lessontitle{
-	width:200vw;
-	height:100px;
-	margin: 10px;
+	width:100vw;
+	margin: 5px;
+	left:50%;
+	transform: translate(-50%,0);
 	position: absolute;
-	top: 1%;
-	left:10%;
 	text-align: center;
-	
-    font-size: 100px;
-    letter-spacing: 5px;
+    font-size: clamp(25px,4vw,50px);
 }
 
 #learningyuyo{
-	width:500px;
-	height:500px;
+	width:clamp(150px,12vw,250px);
 	position: absolute;
-  	left: 48%;
-	top: 18%;
-  	transform: translate(-48%, 0%);
+  	left: 50%;
+	top:110px;
+  	transform: translate(-50%, 0);
 }
 
 #lessonexit{
+	position: absolute;
 	font-family: main;
-	width:min-content;
-	min-width: auto;
-	padding:10px;
+	top:clamp(110px,10vw,160px);
+	padding: clamp(2px,0.5vw,5px);
+	width:clamp(100px,10vw,150px);
 	user-select: none;
 	-webkit-user-drag: none;
-	font-size: 50px;
-    letter-spacing: 5px;
-}
-
-#lessonexit:hover{
-	cursor: pointer;
-	outline: 1px solid black;
+	font-size: clamp(15px,2vw,25px);
 }
 
 /*///////////////////////////////////////////////////////
@@ -235,120 +183,112 @@ html::-webkit-scrollbar {
 
 #gamearea{
 	position: absolute;
-    top: 50%;
-    left: 50%;
-	transform: translate(-50%, -40%); 
-    margin-top: -50px;
-    margin-left: -50px;
-	width:2550px;
-	height:1700px;
+	width:100vw;
+	height:93vh;
+	margin: -8px;
 	-webkit-user-drag: none;
 	overflow-y: hidden;
 	overflow-x: hidden;
 	word-break:keep-all;
 }
 
-div{
-	user-select: none;
-	-webkit-user-drag: none;
-}
-
 #yuyohandgroup{
 	position:absolute;
-	left:1700px;
-	top:30px;
-	zoom: 110%;
+	left: 50%;
+	top: 50%;
+	transform: translate(calc(-50% - 40px), calc(-50% - 300px));
 }
 #yuyohand{
 	position:absolute;
-	top:160px;
-	left: 10px;
 	z-index: 1;
+	width:75px;
+	top:40px;
+	left:-15px;
 }
 #koikoiyuyo{
 	position:absolute;
-	left:160px;
 	z-index: 0;
+	width: 100px;
 }
 
 #card1{
 	position:absolute;
+	width: 18px;
+	aspect-ratio: 1/1.72;
 	z-index: 4;
+	top:35px;
+	left:8px;
 	rotate: -15deg;
-	left:110px;
-	top:120px;
-	width:90px;
+
 }
 #card2{
 	position:absolute;
+	width: 18px;
+	aspect-ratio: 1/1.72;
+	top:32px;
+	left:18px;
 	z-index: 3;
 	rotate: 0deg;
-	left:160px;
-	top:120px;
-	width: 90px;
+
 }
 #card3{
 	position:absolute;
+	width: 18px;
+	aspect-ratio: 1/1.72;
+	top:35px;
+	left:28px;
 	z-index: 2;
 	rotate: 15deg;
-	left:210px;
-	top:120px;
-	width: 90px;
+
 }
 
 #yuyokoikoicombos {
 	position: absolute;
-	width: 1300px;
-	height: 450px;
-	top: 50px;
-	left:450px;
+	left: 50%;
+	top: 50%;
+	transform: translate(calc(-50% - 3.5px),calc(-50% - 125px));
 	display: grid;
-	grid-template-columns: 210px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-	grid-template-rows: 100px 100px 100px 100px;
+	grid-template-columns: 32px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px;
+	grid-template-rows: 30px 30px 30px 30px;
 }
 
 
 #playercards{
 	position: absolute;
-	width: 1050px;
-	height: 450px;
-	top: 1250px;
-	left:100px;
+	left: 50%;
+	top: 50%;
+	transform: translate(calc(-50%),calc(-50% + 320px));
 	display: grid;
-	grid-template-columns: 130px 130px 130px 130px 130px 130px 130px 130px;
-	grid-template-rows: 210px 210px;
+	grid-template-columns: 42px 42px 42px 42px 42px 42px 42px 42px;
+	grid-template-rows: 68px 68px;
 }
 
 #playercombos{
 	position: absolute;
-	width: 1300px;
-	height: 450px;
-	top: 1275px;
-	left:1155px;
+	left: 50%;
+	top: 50%;
+	transform: translate(calc(-50% - 3.5px),calc(-50% + 180px));
 	display: grid;
-	grid-template-columns: 125px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-	grid-template-rows: 100px 100px 100px 100px;
+	grid-template-columns: 32px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px;
+	grid-template-rows: 30px 30px 30px 30px;
 }
 .setcards{
-	height: 72px;
-	width: 42px;
+	width: 12px;
+	aspect-ratio: 1/1.72;
 	outline: 1px solid #d8d8d8
 }
 .typetext{
 	font-family: main;
-	font-size: 30px;
-	letter-spacing: 4px;
-	margin-top: 15px;
-	width: 200px;
+	margin-top: 0;
+	font-size: 8px;
+	letter-spacing: 0.1em;
 }
 
 #maindeck{
 	position: absolute;
-	width: 150px;
-	height: 260px;
-	padding:30px;
-	top: 695px;
-	left:120px;
+	left: 50%;
+	top: 50%;
+	transform: translate(calc(-50% - 192px),calc(-50% - 6px));
 }
 #cardresult,#cardback,#standingdeck{
 	position: absolute;
@@ -359,62 +299,69 @@ div{
 
 #cardresult{
 	z-index: 2;
-	animation-name: flip;
-	animation-delay: 2s;
+	/* animation-name: flip;
 	animation-duration: 1s;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards; */
+
+	/* animation-name: fadedown;
+	animation-duration: 1s;
+	animation-fill-mode: backwards; */
 }
 
 #cardback{
 	z-index: 3;
-	animation-name: backflip;
-	animation-delay: 2s;
+	/* animation-name: backflip;
 	animation-duration: 1s;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards; */
+
+	/* animation-name: fadedown;
+	animation-duration: 1s;
+	animation-fill-mode: backwards; */
 }
 
 @keyframes backflip{
-	0% {transform: rotate3d(0, 1, 0, 0deg); top: 0; z-index: 3;}
-	50% {transform: rotate3d(0, 1, 0, -90deg); top: -300px; z-index: 3;}
-	51% {z-index: 1;}
-	100% {transform: rotate3d(0, 1, 0, -180deg); top: 0; z-index: 1;}
+	0% {transform: rotate3d(1, 1, 0, 0deg); top: 0; z-index: 3;}
+	25% {transform: rotate3d(1, 1, 0, -90deg); top: -50px; z-index: 3;}
+	26% {z-index: 1;}
+	50% {transform: rotate3d(0, 0, 1, -45deg); top: -50px; z-index: 1;}
+	100% {transform: rotate3d(0, 0, 1, 0deg); top: 0; z-index: 1;}
 }
 
 @keyframes flip{
-	0% {transform: rotate3d(0, 1, 0, 0deg); top: 0;}
-	50% {transform: rotate3d(0, 1, 0, -90deg); top: -300px;}
-	100% {transform: rotate3d(0, 1, 0, -180deg); top: 0;}
+	0% {transform: rotate3d(1, 1, 0, 0deg); top: 0;}
+	25% {transform: rotate3d(1, 1, 0, -90deg); top: -50px;}
+	26% {z-index: 1;}
+	50% {transform: rotate3d(0, 0, 1, -45deg); top: -50px;}
+	100% {transform: rotate3d(0, 0, 1, 0deg); top: 0;}
 }
 
 @keyframes fadedown{
 	0% {top: 0; opacity: 100%;}
-	100% {top: 200px; opacity: 0%;}
+	100% {top: 75px; opacity: 0%;}
 }
 @keyframes fadeup{
 	0% {top: 0; opacity: 100%;}
-	100% {top: -200px; opacity: 0%;}
+	100% {top: -75px; opacity: 0%;}
 }
 
 
 #maintable {
 	position: absolute;
-	width: 1800px;
-	height: 600px;
-	top: 500px;
-	left:350px;
-	padding:30px;
+	left: 50%;
+	top: 50%;
+	transform: translate(calc(-50% + 20px),calc(-50% + 25px));
 	display: grid;
-  	grid-template-columns: var(--gap) var(--gap) var(--gap) var(--gap) var(--gap) var(--gap) var(--gap) var(--gap) var(--gap);
-	grid-template-rows: 330px 330px;
+  	grid-template-columns: 38px 38px 38px 38px 38px 38px 38px 38px 38px ;
+	grid-template-rows: 60px 60px ;
 }
 .card{
-	height: 257px;
-	width: 150px;
+	width: 30px;
+	aspect-ratio: 1/1.72;
 	outline: 1px solid #d8d8d8
 }
 .yourcards{
-	height: 192px;
-	width: 112px;
+	width: 35px;
+	aspect-ratio: 1/1.72;
 	outline: 1px solid #d8d8d8
 }
 
@@ -423,122 +370,144 @@ div{
 ////////////////////// music.html ///////////////////////
 ///////////////////////////////////////////////////////*/
 
-#playpause{
+#upper{
 	position: absolute;
-	font-size: 150px;
-	letter-spacing: 5px;
-	margin: 0;
-	top:850px;
-	left: 560px;
-	width: 150px;
-	line-height: 150px;
-	cursor: pointer;
-	outline: 8px solid #000000;
-	border-radius: 10px;
+	top:10px;
+	z-index: 1;
+	font-size: clamp(20px,2vw,30px);
+	width:70vw;
+	top:0;
+	left:10%;
+	transform:translate(-10%,0);
+	text-align: center;
 }
 
-#playpause:active{
-	margin-top: 100px;
-	margin-left: 68px;
-	zoom:90%;
+#mid{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	font-size: clamp(20px,2vw,30px);
+	width:95vw;
+	z-index: 1;
+	text-align: center;
+}
+
+#lower{
+	position: absolute;
+	top:95%;
+	left:50%;
+	transform:translate(-50%,-95%);
+	width: 95vw;
+	text-align: center;
+	z-index: 1;
+}
+
+#playpause{
+	text-align: center;
+	line-height: 0px;
+	font-size: 50px;
 }
 
 #newsong{
-	position: absolute;
-	font-size: 75px;
-	letter-spacing: 5px;
-	top:950px;
-	left: 475px;
-}
-
-#newsong:active{
-	margin-top: 195px;
-	margin-left: 65px;
-	zoom:90%;
+	text-align: center;
+	font-size: clamp(20px,2vw,60px);
 }
 
 #newsonginfo{
-	position: absolute;
-	font-size: 25px;
-	letter-spacing: 3px;
-	line-height: 20px;
-	top:1100px;
 	text-align: center;
-	width:500px;
-	left: 385px;
-}
-
-#musicinfo{
-	position: absolute;
-	text-align: center;
-	font-size: 45px;
-	letter-spacing: 4px;
-	top:-40px;
+	font-size:clamp(10px,2vw,30px);
 }
 
 #artistname{
-	position: absolute;
-	text-align: center;
-	font-size: 40px;
-	letter-spacing: 4px;
-	top:513px;
-	left:450px;
-	width:400px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	outline: 1px solid black;
-}
-
-#songname{
-	position: absolute;
-	text-align: center;
-	font-size: 50px;
-	letter-spacing: 4px;
-	top:250px;
-	left:450px;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	width: 400px;
-	outline: 1px solid black;
-}
-
-#albumcover{
-	position: absolute;
-	width: 400px;
-	top:300px;
-	left:20px;
-	outline: 1px solid;
+	margin-top: -10px;
+	font-size: 12px;
 }
 
 #dancingyuyo{
-	position: absolute;
-	left: 50px;
-	top:800px;
 	animation-name: dancing;
-	animation-duration: 1.25s;
+	animation-duration: 0.5s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	animation-timing-function:ease-in;
+	--yuyodancing_width: 85px;
+	width: var(--yuyodancing_width);
+	position: absolute;
+	top:5%;
+	left:72%;
 }
 
-#headphones{
-	position: absolute;
-	zoom:40%;
-	left: 95px;
-	top: -300px
+#mobileuse{
+	visibility: hidden;
 }
 
-#musicyuyo{
-	position: absolute;
+@media (pointer:none), (pointer:coarse) {
+	#upper,#mid,#lower,#dancingyuyo{
+		z-index: 1;
+	}
+
+	#mobileuse {
+		visibility: visible;
+		position: absolute;
+		width: 100vw;
+		height: 100%;
+		margin: -8px;
+	}
 	
+	#mobileuse_background{
+		position: absolute;
+		width: 100vw;
+		height: 93vh;
+		z-index: 10;
+		background-color: rgb(0, 0, 0,0.5);
+	}
+
+	#mobileuse_textbox{
+		position: absolute;
+		width: 80vw;
+		height: 80vh;
+		padding: 10px;
+		border-radius: 10px;
+		left:50%;
+		top:-100%;
+		transform: translate(-50%,-50%);
+		z-index: 15;
+		background-color: rgba(255, 255, 255, 1);
+		animation-name: mobilemessagefadein;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+
+	}
+
+	#mobileuse_ok{
+		position: absolute;
+		font-size:30px;
+		right:0;
+		bottom: 0;
+		margin:20px;
+		padding: 10px;
+		width:80px;
+		text-align: center;
+		border-radius: 10px;
+		outline: 2px solid black;
+	}
+}
+
+@keyframes mobilemessagefadein {
+	from{top:200%;}
+	to{top:50%;}
+}
+
+@keyframes mobilemessagefadeout {
+	from{top:0;}
+	to{top:-120%;}
 }
 
 @keyframes dancing {
-	0% {transform: matrix(1,0,0.2,1,0,0) translate(-80px,0px);}
-	25% {transform: matrix(1,0,-0.1,0.9,0,0) translate(50px,50px);}
-	50% {transform: matrix(1,0,-0.2,1,0,0) translate(80px,0px);}
-	75% {transform: matrix(1,0,0.1,0.9,0,0) translate(-50px,50px);}
-	100% {transform: matrix(1,0,0.2,1,0,0) translate(-80px,0px);}
+	0% {transform: matrix(1,0,0.2,1,1,1)translate(calc((var(--yuyodancing_width)/10*-1)),calc(var(--yuyodancing_width)/10*-1));}
+	25% {transform: matrix(1,0,0.1,0.9,1,1)translate(calc((var(--yuyodancing_width)/10/2*-1)),calc((var(--yuyodancing_width)/10/2)*-1));}
+	50% {transform: matrix(1,0,0.0,0.8,1,1)translate(0px,0px);}
+	75% {transform: matrix(1,0,-0.1,0.9,1,1)translate(calc(var(--yuyodancing_width)/10/2),calc((var(--yuyodancing_width)/10/2)*-1));}
+	100% {transform: matrix(1,0,-0.2,1,1,1)translate(calc(var(--yuyodancing_width)/10),calc(var(--yuyodancing_width)/10*-1));}
 }
 
 @keyframes duringanimation_page {
@@ -547,11 +516,11 @@ div{
 }
 
 @keyframes pagechange_left {
-    from {left:130%;}
-    to {left:-600px;}
+    from {left:120vw;}
+    to {left:-500px;}
 }
 
 @keyframes pagechange_right {
-    from {left:-600px;}
-    to {left:130%;}
+    from {left:-500px;}
+    to {left:120vw;}
 }
