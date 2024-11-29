@@ -1,7 +1,25 @@
 html {
 	overflow-x: hidden;
 	background-color: white;
-	cursor: url('../misc/assets/cursor.png'), auto;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+}
+
+#darkmode{
+	position: fixed;
+	width:100vw;
+	height: 100vh;
+	z-index: 30;
+	background-color: #d8d8d8;
+	mix-blend-mode: exclusion;
+	margin:-8px;
+	user-select: none;
+	-webkit-user-drag: none;
+	pointer-events: none;
+	opacity: 0;
 }
 
 img,p,a,div,h1{
@@ -37,8 +55,8 @@ html::-webkit-scrollbar {
     top:5px;
 	position: fixed;
 	display: inline-grid;
-    grid: auto / auto auto auto auto;
-    gap:clamp(5px,5vw,200px);
+    grid: auto / auto auto auto auto auto;
+    gap:clamp(2px,2.5vw,200px);
     outline-color: black;
     outline-width: 1px;
     z-index: 15;
@@ -49,15 +67,19 @@ html::-webkit-scrollbar {
 	z-index: 15;
 }
 
-#subjects, #koikoi, #settings{
+#subjects, #koikoi, #settings, #darklight{
     height: clamp(30px,5vw,70px);
     width: auto;
     padding-top: clamp(20px,2.5vw,25px);
     z-index: 15;
     animation-name: duringanimation_page;
-    animation-duration: 8s;
+    animation-duration: 5s;
 	zoom:90%;
+}
 
+#darklight{
+	margin-top: clamp(11px,2vw,15px);
+	zoom:70%;
 }
 
 #ribbon_underline{
@@ -68,27 +90,42 @@ html::-webkit-scrollbar {
     z-index: 14;
 }
 
+@keyframes duringanimation_page {
+    0% {pointer-events: none;}
+    100% {pointer-events: all;}
+}
+
+@keyframes pagechange_left {
+    from {left:120vw;}
+    to {left:-500px;}
+}
+
+@keyframes pagechange_right {
+    from {left:-500px;}
+    to {left:120vw;}
+}
+
 /*///////////////////////////////////////////////////////
 //////////////////// Subject.html ///////////////////////
 ///////////////////////////////////////////////////////*/
 
 #subjectarea{
-	top:clamp(65px,6vw,125px);
+	top:clamp(55px,10vw,115px);
 	position: absolute;
 }
 
 .subjecttext{
 	font-size: clamp(18px,2vw,25px);
 	text-indent:clamp(0px,1vw,10px);
-	margin-top:clamp(50px,10vw,75px);
+	margin-top:clamp(50px,7vw,85px);
 }
 
 .lessontext{
 	font-size: clamp(12px,2vw,20px);
 	width:auto;
 	text-indent: clamp(20px,2vw,100px);
-	margin-top:clamp(15px,2vw,25px);
-	margin-bottom:clamp(15px,2vw,25px);
+	margin-top:clamp(10px,2vw,25px);
+	margin-bottom:clamp(10px,2vw,25px);
 	opacity: 0; 
 	display: none;
 }
@@ -139,6 +176,7 @@ html::-webkit-scrollbar {
 	-webkit-user-drag: none;
 	font-size: clamp(20px,2vw,30px);
 	line-height: clamp(50px,8vw,70px);
+	font-weight: 700;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	word-break:keep-all;
@@ -181,22 +219,49 @@ html::-webkit-scrollbar {
 //////////////////// koikoi.html ////////////////////////
 ///////////////////////////////////////////////////////*/
 
+#fullscreen{
+	position: absolute;
+	margin: -8px;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	z-index: 12;
+	visibility: visible;
+}
+#fullscreentext{
+	position: absolute;
+	width: 100vw;
+	left: 50%;
+	top: 30%;
+	text-align: center;
+	transform: translate(-50%, -30%);
+	font-size: 50px;
+}
+#fullscreenyuyo{
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	transform: translate(-50%, -70%);
+	zoom: 0.6;
+}
 #gamearea{
 	position: absolute;
 	width:100vw;
-	height:93vh;
+	height:100vh;
 	margin: -8px;
 	-webkit-user-drag: none;
 	overflow-y: hidden;
 	overflow-x: hidden;
 	word-break:keep-all;
+	z-index: 1;
 }
 
 #yuyohandgroup{
 	position:absolute;
-	left: 50%;
+	left: 70%;
 	top: 50%;
-	transform: translate(calc(-50% - 40px), calc(-50% - 300px));
+	zoom:2.5;
+	transform: translate(calc(-70%), calc(-50% - 150px));
 }
 #yuyohand{
 	position:absolute;
@@ -244,51 +309,51 @@ html::-webkit-scrollbar {
 
 #yuyokoikoicombos {
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(calc(-50% - 3.5px),calc(-50% - 125px));
+	left: 35%;
+	top: 20%;
+	transform: translate(calc(-35%),calc(-20% + 5px));
 	display: grid;
-	grid-template-columns: 32px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px;
-	grid-template-rows: 30px 30px 30px 30px;
+	grid-template-columns: 125px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px ;
+	grid-template-rows: 60px 60px 60px 60px;
 }
 
 
 #playercards{
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(calc(-50%),calc(-50% + 320px));
+	left: 20%;
+	top: 95%;
+	transform: translate(calc(-20%),calc(-95% + 10px));
 	display: grid;
-	grid-template-columns: 42px 42px 42px 42px 42px 42px 42px 42px;
-	grid-template-rows: 68px 68px;
+	grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px;
+	grid-template-rows: 130px 130px;
 }
 
 #playercombos{
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(calc(-50% - 3.5px),calc(-50% + 180px));
+	left: 95%;
+	top: 95%;
+	transform: translate(calc(-95%),calc(-95% + 5px));
 	display: grid;
-	grid-template-columns: 32px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px;
-	grid-template-rows: 30px 30px 30px 30px;
+	grid-template-columns: 75px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px ;
+	grid-template-rows: 60px 60px 60px 60px;
 }
 .setcards{
-	width: 12px;
+	width: 30px;
 	aspect-ratio: 1/1.72;
 	outline: 1px solid #d8d8d8
 }
 .typetext{
 	font-family: main;
 	margin-top: 0;
-	font-size: 8px;
+	font-size: 20px;
 	letter-spacing: 0.1em;
 }
 
 #maindeck{
 	position: absolute;
-	left: 50%;
+	left: 20%;
 	top: 50%;
-	transform: translate(calc(-50% - 192px),calc(-50% - 6px));
+	transform: translate(calc(-20%),calc(-50% - 15px));
 }
 #cardresult,#cardback,#standingdeck{
 	position: absolute;
@@ -302,10 +367,6 @@ html::-webkit-scrollbar {
 	/* animation-name: flip;
 	animation-duration: 1s;
 	animation-fill-mode: forwards; */
-
-	/* animation-name: fadedown;
-	animation-duration: 1s;
-	animation-fill-mode: backwards; */
 }
 
 #cardback{
@@ -313,10 +374,6 @@ html::-webkit-scrollbar {
 	/* animation-name: backflip;
 	animation-duration: 1s;
 	animation-fill-mode: forwards; */
-
-	/* animation-name: fadedown;
-	animation-duration: 1s;
-	animation-fill-mode: backwards; */
 }
 
 @keyframes backflip{
@@ -335,35 +392,206 @@ html::-webkit-scrollbar {
 	100% {transform: rotate3d(0, 0, 1, 0deg); top: 0;}
 }
 
-@keyframes fadedown{
-	0% {top: 0; opacity: 100%;}
-	100% {top: 75px; opacity: 0%;}
-}
-@keyframes fadeup{
-	0% {top: 0; opacity: 100%;}
-	100% {top: -75px; opacity: 0%;}
-}
-
 
 #maintable {
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	transform: translate(calc(-50% + 20px),calc(-50% + 25px));
+	top: 60%;
+	transform: translate(calc(-50% + 25px),calc(-60%));
 	display: grid;
-  	grid-template-columns: 38px 38px 38px 38px 38px 38px 38px 38px 38px ;
-	grid-template-rows: 60px 60px ;
+  	grid-template-columns: 105px 105px 105px 105px 105px 105px 105px 105px 105px ;
+	grid-template-rows: 175px 175px ;
 }
 .card{
-	width: 30px;
+	width: 90px;
 	aspect-ratio: 1/1.72;
 	outline: 1px solid #d8d8d8
 }
 .yourcards{
-	width: 35px;
+	width: 70px;
 	aspect-ratio: 1/1.72;
 	outline: 1px solid #d8d8d8
 }
+
+/*///////////////////////////////////////////////////////
+//////////////////// koikoi.html ////////////////////////
+/////////////////////// mobile //////////////////////////
+///////////////////////////////////////////////////////*/
+
+@media (pointer:none), (pointer:coarse) {
+	#fullscreen,#fullscreentext{
+		visibility: hidden;
+	}
+	
+	#gamearea{
+		position: absolute;
+		width:100vw;
+		height:93vh;
+		margin: -8px;
+		-webkit-user-drag: none;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		word-break:keep-all;
+	}
+
+	#yuyohandgroup{
+		position:absolute;
+		left: 50%;
+		top: 50%;
+		zoom:1.1;
+		transform: translate(calc(-50% - 45px), calc(-50% - 265px));
+	}
+	#yuyohand{
+		position:absolute;
+		z-index: 1;
+		width:75px;
+		top:40px;
+		left:-15px;
+	}
+	#koikoiyuyo{
+		position:absolute;
+		z-index: 0;
+		width: 100px;
+	}
+
+	#card1{
+		position:absolute;
+		width: 18px;
+		aspect-ratio: 1/1.72;
+		z-index: 4;
+		top:35px;
+		left:8px;
+		rotate: -15deg;
+
+	}
+	#card2{
+		position:absolute;
+		width: 18px;
+		aspect-ratio: 1/1.72;
+		top:32px;
+		left:18px;
+		z-index: 3;
+		rotate: 0deg;
+
+	}
+	#card3{
+		position:absolute;
+		width: 18px;
+		aspect-ratio: 1/1.72;
+		top:35px;
+		left:28px;
+		z-index: 2;
+		rotate: 15deg;
+
+	}
+
+	#yuyokoikoicombos {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(calc(-50% + 5px),calc(-50% - 115px));
+		display: grid;
+		grid-template-columns: 32px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px ;
+		grid-template-rows: 25px 25px 25px 25px;
+	}
+
+
+	#playercards{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(calc(-50%),calc(-50% + 310px));
+		display: grid;
+		grid-template-columns: 42px 42px 42px 42px 42px 42px 42px 42px;
+		grid-template-rows: 68px 68px;
+	}
+
+	#playercombos{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(calc(-50% + 5px),calc(-50% + 180px));
+		display: grid;
+		grid-template-columns: 32px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px 13px ;
+		grid-template-rows: 25px 25px 25px 25px;
+	}
+	.setcards{
+		width: 10px;
+		aspect-ratio: 1/1.72;
+		outline: 1px solid #d8d8d8
+	}
+	.typetext{
+		font-family: main;
+		margin-top: 0;
+		font-size: 8px;
+		letter-spacing: 0.1em;
+	}
+
+	#maindeck{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(calc(-50% - 188px),-50%);
+	}
+	#cardresult,#cardback,#standingdeck{
+		position: absolute;
+		top: 0;
+		left: 0;
+		outline: 1px solid #d8d8d8
+	}
+
+	#cardresult{
+		z-index: 2;
+		/* animation-name: flip;
+		animation-duration: 1s;
+		animation-fill-mode: forwards; */
+	}
+
+	#cardback{
+		z-index: 3;
+		/* animation-name: backflip;
+		animation-duration: 1s;
+		animation-fill-mode: forwards; */
+	}
+
+	@keyframes backflip{
+		0% {transform: rotate3d(1, 1, 0, 0deg); top: 0; z-index: 3;}
+		25% {transform: rotate3d(1, 1, 0, -90deg); top: -50px; z-index: 3;}
+		26% {z-index: 1;}
+		50% {transform: rotate3d(0, 0, 1, -45deg); top: -50px; z-index: 1;}
+		100% {transform: rotate3d(0, 0, 1, 0deg); top: 0; z-index: 1;}
+	}
+
+	@keyframes flip{
+		0% {transform: rotate3d(1, 1, 0, 0deg); top: 0;}
+		25% {transform: rotate3d(1, 1, 0, -90deg); top: -50px;}
+		26% {z-index: 1;}
+		50% {transform: rotate3d(0, 0, 1, -45deg); top: -50px;}
+		100% {transform: rotate3d(0, 0, 1, 0deg); top: 0;}
+	}
+
+
+	#maintable {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(calc(-50% + 25px),calc(-50% + 30px));
+		display: grid;
+		grid-template-columns: 38px 38px 38px 38px 38px 38px 38px 38px 38px ;
+		grid-template-rows: 60px 60px ;
+	}
+	.card{
+		width: 30px;
+		aspect-ratio: 1/1.72;
+		outline: 1px solid #d8d8d8
+	}
+	.yourcards{
+		width: 35px;
+		aspect-ratio: 1/1.72;
+		outline: 1px solid #d8d8d8
+	}
+}
+
 
 
 /*///////////////////////////////////////////////////////
@@ -508,19 +736,4 @@ html::-webkit-scrollbar {
 	50% {transform: matrix(1,0,0.0,0.8,1,1)translate(0px,0px);}
 	75% {transform: matrix(1,0,-0.1,0.9,1,1)translate(calc(var(--yuyodancing_width)/10/2),calc((var(--yuyodancing_width)/10/2)*-1));}
 	100% {transform: matrix(1,0,-0.2,1,1,1)translate(calc(var(--yuyodancing_width)/10),calc(var(--yuyodancing_width)/10*-1));}
-}
-
-@keyframes duringanimation_page {
-    0% {pointer-events: none;}
-    100% {pointer-events: all;}
-}
-
-@keyframes pagechange_left {
-    from {left:120vw;}
-    to {left:-500px;}
-}
-
-@keyframes pagechange_right {
-    from {left:-500px;}
-    to {left:120vw;}
 }
