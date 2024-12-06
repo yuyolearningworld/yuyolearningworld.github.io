@@ -145,7 +145,7 @@ function yuyospeak() {
 		if (i < text.length) {
 		document.getElementById("lessontextbox").textContent += text[i]
 		var i = i + 1
-		setTimeout(function(){main(i)}, 75)
+		setTimeout(function(){main(i)}, 85)
 		}
 		} 
 	}

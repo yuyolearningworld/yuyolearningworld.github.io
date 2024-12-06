@@ -174,8 +174,8 @@ html::-webkit-scrollbar {
 	text-align: center;
 	user-select: none;
 	-webkit-user-drag: none;
-	font-size: clamp(20px,2vw,30px);
-	line-height: clamp(50px,8vw,70px);
+	font-size: clamp(18px,2vw,30px);
+	line-height: clamp(50px,5vw,70px);
 	font-weight: 700;
 	overflow-y: scroll;
 	overflow-x: hidden;
