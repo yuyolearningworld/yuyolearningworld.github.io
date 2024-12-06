@@ -12,6 +12,9 @@ var HTML = `
 </head>
 <body>
 
+	<div id="darkmode"></div>
+
+
 	<img id="animation_frame" src="../misc/assets/animation_frame.png">
 
 	<script src="../javascript/lesson.js"></script>
@@ -106,7 +109,8 @@ function yuyospeak() {
 	yuyospriteflip()
 	var i = 0
 	var text = data[current]
-	var text = text.replaceAll("_","\\r\\n ")
+	var text = text.replaceAll("_",`
+`)
 	// _ = new line in content text
 	var text = text.replaceAll(" "," ")
 	globalThis.writingstate = 1
@@ -122,7 +126,8 @@ function yuyospeak() {
 		document.getElementById("lessontextbox").addEventListener("click", function(){
 			globalThis.halt = true
 			document.getElementById("lessontextbox").textContent = ""
-			document.getElementById("lessontextbox").textContent = data[current].replaceAll("_","\\r\\n ").replaceAll(" "," ")
+			document.getElementById("lessontextbox").textContent = data[current].replaceAll("_",`
+`).replaceAll(" "," ")
 			globalThis.writingstate = 0
 			document.getElementById("learningyuyo").src = "../misc/sprites/yuyo0.png"
 		})

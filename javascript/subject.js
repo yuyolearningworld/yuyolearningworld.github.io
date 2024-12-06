@@ -23,6 +23,9 @@ fetch("../data/data.json", {method: 'GET'})
 </head>
 <body>
 
+    <div id="darkmode"></div>
+    <script src="../javascript/darkmode.js"></script>
+
     <script src="../javascript/navigation.js"></script>
 	
     <img id="animation_frame" src="../misc/assets/animation_frame.png">
@@ -30,9 +33,11 @@ fetch("../data/data.json", {method: 'GET'})
     <div class="grid_ribbon">
         <img id="logo" src="../misc/assets/yuyo_logo.png">
         <img onclick="subjectpress()" id="subjects" src="../misc/assets/subjects.png">
-        <img onclick="koikoipress()" id="koikoi" src="../misc/assets/koikoi.png">
-        <img onclick="musicpress()" id="settings" src="../misc/assets/music.png">
+        <img  onclick="koikoipress()" id="koikoi" src="../misc/assets/koikoi.png">
+        <img  onclick="musicpress()" id="settings" src="../misc/assets/music.png">
+        <img  onclick="darklight()" id="darklight" src="../misc/assets/darkmode.png">
     </div>
+    
     <img id="ribbon_underline" src="../misc/assets/ribbon_underline.png">
 
     <script src="../javascript/dropdown.js"></script>
