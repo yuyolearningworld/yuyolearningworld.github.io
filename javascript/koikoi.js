@@ -1,18 +1,3 @@
-MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-var all_playable_cards = []
-for (var i=0; i<MONTHS.length; i++) {
-    for (i2=1; i2<5; i2++) {
-        all_playable_cards.push(MONTHS[i]+String(i2))
-    }
-}
-ALLCARDS = all_playable_cards
-
-// catagories
-plains = ["Jan1","Jan2","Feb1","Feb2","Mar1","Mar2","Apr1","Apr2","May1","May2","Jun1","Jun2","Jul1","Jul2","Aug1","Aug2","Sep1","Sep2","Oct1","Oct2","Nov1","Dec1","Dec2","Dec3"]
-animals = ["Feb4","Apr4","May4","Jun4","Jul4","Aug3","Sep4","Oct4","Nov3"]
-ribbons = ["Jan3","Feb3","Mar3","Apr3","May3","Jun3","Jul3","Sep3", "Oct3","Nov2"]
-brights = ["Jan4","Mar4","Aug4","Nov4","Dec4"]
-
 // sets
 /*
 
@@ -47,165 +32,228 @@ Kasu (カス) – 10 Dregs – 1 point
 
 */
 
-document.getElementsByClassName("card").item(1)
-
-setInterval(function(){
-    if (screen.height != window.innerHeight || screen.width != window.innerWidth) {
-        document.getElementById("fullscreen").style.visibility = "visible"
-    } else {
-        document.getElementById("fullscreen").style.visibility = "hidden"
-    }
+function koikoiOVERWRITE(){
+    document.body.innerHTML = '';
+    document.head.innerHTML = '';
+    setTimeout(function(){document.write(`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koi-Koi</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="icon" href="../misc/logo/logo30x30.png">
+    <link rel="manifest" href="../data/manifest.webmanifest"/>
+</head>
+<body>
     
+    <div id="darkmode"></div>
+    <script src="../javascript/darkmode.js "></script>
+    <script src="../javascript/navigation.js"></script>
     
-    var totalinvertcard = [document.getElementsByClassName("yourcards"), document.getElementsByClassName("card"), document.getElementsByClassName("setcards"), document.getElementById("card1"), document.getElementById("card2"), document.getElementById("card3")]
-    totalinvertcard.forEach(function(value){
-        for (i=0; i<value.length; i++){
-            if (document.getElementById("darkmode").style.opacity == 1) {
-                value.item(i).style.webkitFilter = "invert(100%)"
-                value.item(i).style.Filter = "progid:DXImageTransform.Microsoft.BasicImage(invert='1');"
-                document.getElementById("card1").style.webkitFilter = "invert(100%)"
-                document.getElementById("card2").style.webkitFilter = "invert(100%)"
-                document.getElementById("card3").style.webkitFilter = "invert(100%)"
-                document.getElementById("card1").style.Filter = "progid:DXImageTransform.Microsoft.BasicImage(invert='1');"
-                document.getElementById("card2").style.Filter = "progid:DXImageTransform.Microsoft.BasicImage(invert='1');"
-                document.getElementById("card3").style.Filter = "progid:DXImageTransform.Microsoft.BasicImage(invert='1');"
-                document.getElementById("yuyohand").style.webkitFilter = "invert(100%)"
-                document.getElementById("yuyohand").style.Filter = "progid:DXImageTransform.Microsoft.BasicImage(invert='1');"
-            } else {
-                value.item(i).style.webkitFilter = ""
-                value.item(i).style.Filter = ""
-                document.getElementById("card1").style.webkitFilter = ""
-                document.getElementById("card2").style.webkitFilter = ""
-                document.getElementById("card3").style.webkitFilter = ""
-                document.getElementById("card1").style.Filter = ""
-                document.getElementById("card2").style.Filter = ""
-                document.getElementById("card3").style.Filter = ""
-                document.getElementById("yuyohand").style.webkitFilter = ""
-                document.getElementById("yuyohand").style.Filter = ""
-            }   
-        }
-    })
-}, 1)
+    <img id="animation_frame" src="../misc/assets/animation_frame.png">
 
+    <div class="grid_ribbon">
+        <img onclick="subjectpress()"id="logo" src="../misc/assets/yuyo_logo.png">
+        <img onclick="subjectpress()" id="subjects" src="../misc/assets/subjects.png">
+        <img onclick="koikoipress()" id="koikoi" src="../misc/assets/koikoi.png">
+        <img onclick="musicpress()" id="settings" src="../misc/assets/music.png">
+        <img onclick="darklight()" id="darklight" src="../misc/assets/darkmode.png">
+    </div>
 
+    <img id="ribbon_underline" src="../misc/assets/ribbon_underline.png">
 
-//player 2 is yuyo
-var player1cards = []
-var player1sets = {
-    "plains":  [],
-    "animals": [],
-    "ribbons": [],
-    "brights": []
+    <div id="fullscreen">
+        <p id="fullscreentext"> Enter fullscreen by pressing F11 to play</p>
+        <img id="fullscreenyuyo" src="../misc/sprites/yuyo0.png">
+    </div>
+
+    
+
+    <div id="koikoimenu">
+        <div id=koikoimenu_player>You Scored!</div>
+        <div id=koikoimenu_score></div>
+        <div id="koikoibutton">KOI-KOI</div>
+        <div id="stopbutton">STOP</div>
+    </div>
+
+<div id="gamearea">
+
+    <div id="koikoirestart" onclick="restartGame()">Restart</div>
+
+    <div id="koikoiscore">Score:<div id="score">0</div></div>
+    <div id="koikoimulti">Multiplier:<div id="multi">1x</div></div>
+
+    <div id="yuyokoikoiscore">Yuyo's Score:<div id="yuyoscore">0</div></div>
+    
+    <div id="yuyohandgroup">
+        <img id="koikoiyuyo" src="../misc/sprites/yuyo0.png">
+        <img id="yuyohand" src="../misc/assets/hand.png">
+        <img id="card1" src="../misc/assets/cardback.png">
+        <img id="card2" src="../misc/assets/cardback.png">
+        <img id="card3" src="../misc/assets/cardback.png">
+    </div>
+
+    <div id="yuyokoikoicombos">
+        <p class="typetext" style="grid-column: 1; grid-row: 1;"> Yuyo Plains</p>
+            <img class="setcards" id="yp1"  src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 1;">
+            <img class="setcards" id="yp2"  src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 1;">
+            <img class="setcards" id="yp3"  src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 1;">
+            <img class="setcards" id="yp4"  src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 1;">
+            <img class="setcards" id="yp5"  src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 1;">
+            <img class="setcards" id="yp6"  src="../misc/cards/nocard.png" style="grid-column: 7; grid-row: 1;">
+            <img class="setcards" id="yp7"  src="../misc/cards/nocard.png" style="grid-column: 8; grid-row: 1;">
+            <img class="setcards" id="yp8"  src="../misc/cards/nocard.png" style="grid-column: 9; grid-row: 1;">
+            <img class="setcards" id="yp9"  src="../misc/cards/nocard.png" style="grid-column: 10; grid-row: 1;">
+            <img class="setcards" id="yp10" src="../misc/cards/nocard.png" style="grid-column: 11; grid-row: 1;">
+            <img class="setcards" id="yp11" src="../misc/cards/nocard.png" style="grid-column: 12; grid-row: 1;">
+            <img class="setcards" id="yp12" src="../misc/cards/nocard.png" style="grid-column: 13; grid-row: 1;">
+            <img class="setcards" id="yp13" src="../misc/cards/nocard.png" style="grid-column: 14; grid-row: 1;">
+            <img class="setcards" id="yp14" src="../misc/cards/nocard.png" style="grid-column: 15; grid-row: 1;">
+            <img class="setcards" id="yp15" src="../misc/cards/nocard.png" style="grid-column: 16; grid-row: 1;">
+            <img class="setcards" id="yp16" src="../misc/cards/nocard.png" style="grid-column: 17; grid-row: 1;">
+            <img class="setcards" id="yp17" src="../misc/cards/nocard.png" style="grid-column: 18; grid-row: 1;">
+            <img class="setcards" id="yp18" src="../misc/cards/nocard.png" style="grid-column: 19; grid-row: 1;">
+            <img class="setcards" id="yp19" src="../misc/cards/nocard.png" style="grid-column: 20; grid-row: 1;">
+            <img class="setcards" id="yp20" src="../misc/cards/nocard.png" style="grid-column: 21; grid-row: 1;">
+            <img class="setcards" id="yp21" src="../misc/cards/nocard.png" style="grid-column: 22; grid-row: 1;">
+            <img class="setcards" id="yp22" src="../misc/cards/nocard.png" style="grid-column: 23; grid-row: 1;">
+            <img class="setcards" id="yp23" src="../misc/cards/nocard.png" style="grid-column: 24; grid-row: 1;">
+            <img class="setcards" id="yp24" src="../misc/cards/nocard.png" style="grid-column: 25; grid-row: 1;">
+        <p class="typetext" style="grid-column: 1; grid-row: 2;">Yuyo Ribbons</p>
+            <img class="setcards" id="yr1" src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 2;">
+            <img class="setcards" id="yr2" src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 2;">
+            <img class="setcards" id="yr3" src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 2;">
+            <img class="setcards" id="yr4" src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 2;">
+            <img class="setcards" id="yr5" src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 2;">
+            <img class="setcards" id="yr6" src="../misc/cards/nocard.png" style="grid-column: 7; grid-row: 2;">
+            <img class="setcards" id="yr7" src="../misc/cards/nocard.png" style="grid-column: 8; grid-row: 2;">
+            <img class="setcards" id="yr8" src="../misc/cards/nocard.png" style="grid-column: 9; grid-row: 2;">
+        <p class="typetext" style="grid-column: 1; grid-row: 3;">Yuyo Animals</p>
+            <img class="setcards" id="ya1" src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 3;">
+            <img class="setcards" id="ya2" src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 3;">
+            <img class="setcards" id="ya3" src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 3;">
+            <img class="setcards" id="ya4" src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 3;">
+            <img class="setcards" id="ya5" src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 3;">
+            <img class="setcards" id="ya6" src="../misc/cards/nocard.png" style="grid-column: 7; grid-row: 3;">
+            <img class="setcards" id="ya7" src="../misc/cards/nocard.png" style="grid-column: 8; grid-row: 3;">
+            <img class="setcards" id="ya8" src="../misc/cards/nocard.png" style="grid-column: 9; grid-row: 3;">
+            <img class="setcards" id="ya8" src="../misc/cards/nocard.png" style="grid-column: 10; grid-row: 3;">
+        <p class="typetext" style="grid-column: 1; grid-row: 4;">Yuyo Brights</p>
+            <img class="setcards" id="yb1" src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 4;">
+            <img class="setcards" id="yb2" src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 4;">
+            <img class="setcards" id="yb3" src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 4;">
+            <img class="setcards" id="yb4" src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 4;">
+            <img class="setcards" id="yb5" src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 4;">
+    </div>
+
+    <div id="maintable">
+        <img class="card" id="table1-1" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 1; grid-row: 1;">
+        <img class="card" id="table1-2" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 1;">
+        <img class="card" id="table1-3" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 1;">
+        <img class="card" id="table1-4" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 1;">
+        <img class="card" id="table1-5" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 1;">
+        <img class="card" id="table1-6" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 1;">
+        <img class="card" id="table1-7" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 7; grid-row: 1;"> 
+        <img class="card" id="table1-8" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 8; grid-row: 1;">
+        <img class="card" id="table1-9" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 9; grid-row: 1;">
+        <img class="card" id="table2-1" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 1; grid-row: 2;">
+        <img class="card" id="table2-2" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 2;">
+        <img class="card" id="table2-3" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 2;">
+        <img class="card" id="table2-4" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 2;">
+        <img class="card" id="table2-5" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 2;">
+        <img class="card" id="table2-6" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 2;">
+        <img class="card" id="table2-7" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 7; grid-row: 2;">
+        <img class="card" id="table2-8" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 8; grid-row: 2;">
+        <img class="card" id="table2-9" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" style="grid-column: 9; grid-row: 2;">
+    </div>
+
+    <div id="maindeck">
+        <img class="card" id="standingdeck" src="../misc/assets/cardback.png">
+        <img class="card" id="cardback" src="../misc/assets/cardback.png">
+        <img class="card" id="cardresult" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" >
+    </div>
+
+    <div id="playercards">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard1">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard2">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard3">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard4">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard5">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard6">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard7">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard8">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard9">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard10">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard11">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard12">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard13">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard14">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard15">
+        <img class="yourcards" onclick="elementclick(this.id)" src="../misc/cards/nocard.png" id="handcard16">
+    </div>
+
+    <div id="playercombos">
+        <p class="typetext" style="grid-column: 1; grid-row: 1;">Plains</p>
+            <img class="setcards" id="p1"  src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 1;">
+            <img class="setcards" id="p2"  src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 1;">
+            <img class="setcards" id="p3"  src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 1;">
+            <img class="setcards" id="p4"  src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 1;">
+            <img class="setcards" id="p5"  src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 1;">
+            <img class="setcards" id="p6"  src="../misc/cards/nocard.png" style="grid-column: 7; grid-row: 1;">
+            <img class="setcards" id="p7"  src="../misc/cards/nocard.png" style="grid-column: 8; grid-row: 1;">
+            <img class="setcards" id="p8"  src="../misc/cards/nocard.png" style="grid-column: 9; grid-row: 1;">
+            <img class="setcards" id="p9"  src="../misc/cards/nocard.png" style="grid-column: 10; grid-row: 1;">
+            <img class="setcards" id="p10" src="../misc/cards/nocard.png" style="grid-column: 11; grid-row: 1;">
+            <img class="setcards" id="p11" src="../misc/cards/nocard.png" style="grid-column: 12; grid-row: 1;">
+            <img class="setcards" id="p12" src="../misc/cards/nocard.png" style="grid-column: 13; grid-row: 1;">
+            <img class="setcards" id="p13" src="../misc/cards/nocard.png" style="grid-column: 14; grid-row: 1;">
+            <img class="setcards" id="p14" src="../misc/cards/nocard.png" style="grid-column: 15; grid-row: 1;">
+            <img class="setcards" id="p15" src="../misc/cards/nocard.png" style="grid-column: 16; grid-row: 1;">
+            <img class="setcards" id="p16" src="../misc/cards/nocard.png" style="grid-column: 17; grid-row: 1;">
+            <img class="setcards" id="p17" src="../misc/cards/nocard.png" style="grid-column: 18; grid-row: 1;">
+            <img class="setcards" id="p18" src="../misc/cards/nocard.png" style="grid-column: 19; grid-row: 1;">
+            <img class="setcards" id="p19" src="../misc/cards/nocard.png" style="grid-column: 20; grid-row: 1;">
+            <img class="setcards" id="p20" src="../misc/cards/nocard.png" style="grid-column: 21; grid-row: 1;">
+            <img class="setcards" id="p21" src="../misc/cards/nocard.png" style="grid-column: 22; grid-row: 1;">
+            <img class="setcards" id="p22" src="../misc/cards/nocard.png" style="grid-column: 23; grid-row: 1;">
+            <img class="setcards" id="p23" src="../misc/cards/nocard.png" style="grid-column: 24; grid-row: 1;">
+            <img class="setcards" id="p24" src="../misc/cards/nocard.png" style="grid-column: 25; grid-row: 1;">
+        <p class="typetext" style="grid-column: 1; grid-row: 2;">Ribbons</p>
+            <img class="setcards" id="r1" src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 2;">
+            <img class="setcards" id="r2" src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 2;">
+            <img class="setcards" id="r3" src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 2;">
+            <img class="setcards" id="r4" src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 2;">
+            <img class="setcards" id="r5" src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 2;">
+            <img class="setcards" id="r6" src="../misc/cards/nocard.png" style="grid-column: 7; grid-row: 2;">
+            <img class="setcards" id="r7" src="../misc/cards/nocard.png" style="grid-column: 8; grid-row: 2;">
+            <img class="setcards" id="r8" src="../misc/cards/nocard.png" style="grid-column: 9; grid-row: 2;">
+        <p class="typetext" style="grid-column: 1; grid-row: 3;">Animals</p>
+            <img class="setcards" id="a1" src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 3;">
+            <img class="setcards" id="a2" src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 3;">
+            <img class="setcards" id="a3" src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 3;">
+            <img class="setcards" id="a4" src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 3;">
+            <img class="setcards" id="a5" src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 3;">
+            <img class="setcards" id="a6" src="../misc/cards/nocard.png" style="grid-column: 7; grid-row: 3;">
+            <img class="setcards" id="a7" src="../misc/cards/nocard.png" style="grid-column: 8; grid-row: 3;">
+            <img class="setcards" id="a8" src="../misc/cards/nocard.png" style="grid-column: 9; grid-row: 3;">
+            <img class="setcards" id="a9" src="../misc/cards/nocard.png" style="grid-column: 10; grid-row: 3;">
+        <p class="typetext" style="grid-column: 1; grid-row: 4;">Brights</p>
+            <img class="setcards" id="b1" src="../misc/cards/nocard.png" style="grid-column: 2; grid-row: 4;">
+            <img class="setcards" id="b2" src="../misc/cards/nocard.png" style="grid-column: 3; grid-row: 4;">
+            <img class="setcards" id="b3" src="../misc/cards/nocard.png" style="grid-column: 4; grid-row: 4;">
+            <img class="setcards" id="b4" src="../misc/cards/nocard.png" style="grid-column: 5; grid-row: 4;">
+            <img class="setcards" id="b5" src="../misc/cards/nocard.png" style="grid-column: 6; grid-row: 4;">
+    </div>
+    
+</div>
+    <script src="../javascript/koikoi-gameplay.js"></script>
+
+</body>
+</html>
+`)},10)
 }
-var player1setscomp = []
 
-var player2cards = []
-var player2sets = {
-    "plains":  [],
-    "animals": [],
-    "ribbons": [],
-    "brights": []
-}
-var player2setscomp = []
 
-function addImage(element, carddir){ //adds card image to html img element
-    var current = document.getElementById(element)
-    current.style.outline = "1px solid #0e0e0e"
-    current.src = window.location.href.replace("html/koikoi.html","") + carddir
-}
-function removeImage(element){ //sets html img element to nocard.png
-    var current = document.getElementById(element)
-    current.style.outline = "1px solid #d8d8d8"
-    current.src = window.location.href.replace("html/koikoi.html","") + "misc/cards/nocard.png"
-}
 
-function getRandomcard(){ //picks a card.png file dir at random and returns it
-    index = Math.round(Math.random()*(all_playable_cards.length-1))
-    return all_playable_cards[index]
-} 
-
-function cardURL(card){ //input name of card and returns with url to access it
-    return `misc/cards/${card}.png`
-}
-
-var current_clicked
-var previous_clicked
-function elementclick(id){ //updates current_clicked var with clickable element and sets old to previously clicked 
-    if (current_clicked == null) {}
-    else {
-        previous_clicked = current_clicked
-    }
-    current_clicked = id
-}
-
-function flipAnimation(){  //runs the complete animation for the flip
-    document.getElementById("cardresult").style.animation = "flip 1s linear 1s 1 normal forwards running"
-    document.getElementById("cardback").style.animation = "backflip 1s linear 1s 1 normal forwards running"
-}
-
-function removeCardfromPlay(card){ //removes the inputted card for the list of cards that can be used in the game
-    for (index=0; index<all_playable_cards.length; index++){
-        if (all_playable_cards[index] == card) {
-            all_playable_cards.splice(index, 1);
-            return
-        }
-    }
-}
-
-function addToHand(card, player_array , player_num){ //adds card image dir inputed to a free space in your hand
-    var cardurl = cardURL(card)
-    if (player_array.length >= 16){return}
-    player_array.push(card)
-    removeCardfromPlay(card)
-    for (index=0; index<player_array.length; index++) {}
-    if (player_num == 1) {
-        addImage(`handcard${index}`,cardurl)
-    } else {}
-} 
-
-function removeFromHand(pos){ // removes card from a specific position in your hand
-    removeImage(`handcard${pos}`)
-} 
-
-function addToTable(x,y,card){ //adds card to specific position on table
-    addImage(`table${y}-${x}`, cardURL(card))
-} 
-function removeFromTable(x,y){ //removes card to specific position on table
-    removeImage(`table${y}-${x}`)
-}
-
-function addToSets(type, card, player_num){ //adds specific card to the correct array
-    if (player_num == 1) {
-        var current_dir = player1sets
-    } else {
-        var current_dir = player2sets
-    }
-    current_dir[type].push(card)
-}
-
-function updateSets(){} //uploads the current array images to the screen
-function checkSets(){} // checks if and what set has been completed, adds it to complete array
-function checkCards(card1, card2){} //checks the 2 inputed cards and plays a result based of what is supposed to happen
-
-function setupTable(){ //puts 8 cards in a 4x2 format on the main table
-    for (i=1; i<=4; i++){
-        addToTable(i,1,getRandomcard())
-    }
-    for (i=1; i<=4; i++){
-        addToTable(i,2,getRandomcard())
-    }
-}
-
-function setupHandCards(){ //gives each player 8 cards to start the game
-    for (i=0; i<8; i++){
-        addToHand(getRandomcard(),player1cards,1)
-        addToHand(getRandomcard(),player2cards,null)
-    }
-}
-
-function setMultiplier(){}
-function setPoints(){}
-
-function SETCOMPLETE(){} //opens up the menu to allow the player to koikoi (continue) or end
-function KOIKOI(){} //increases multiplier by 1 and continues game
-function GAMEEND(){} //calculates score from all combos achieved 

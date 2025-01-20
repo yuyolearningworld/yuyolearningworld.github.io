@@ -180,5 +180,5 @@ function exitToMain(){
 	document.getElementById("animation_frame").style.animationName = "pagechange_left"
 	document.getElementById("animation_frame").style.animationDuration = "2s"
 	document.getElementById("animation_frame").style.animationFillMode = "forwards"
-	setTimeout(function(){window.location.replace("../html/subjects.html")},2000)
+	setTimeout(function(){window.location.replace("index.html")},2000)
 }

@@ -220,32 +220,33 @@ html::-webkit-scrollbar {
 ///////////////////////////////////////////////////////*/
 
 #fullscreen{
-	position: absolute;
+	position: fixed;
 	margin: -8px;
 	width: 100vw;
 	height: 100vh;
 	background-color: white;
 	z-index: 12;
-	visibility: visible;
+	visibility: hidden;
 }
 #fullscreentext{
-	position: absolute;
+	position: fixed;
 	width: 100vw;
 	left: 50%;
 	top: 30%;
 	text-align: center;
 	transform: translate(-50%, -30%);
 	font-size: 50px;
+	visibility: hidden;
 }
 #fullscreenyuyo{
-	position: absolute;
+	position: fixed;
 	left: 50%;
 	top: 70%;
 	transform: translate(-50%, -70%);
 	zoom: 0.6;
 }
 #gamearea{
-	position: absolute;
+	position: fixed;
 	width:100vw;
 	height:100vh;
 	margin: -8px;
@@ -256,29 +257,137 @@ html::-webkit-scrollbar {
 	z-index: 1;
 }
 
+#koikoiscore{
+	position:fixed;
+	left: 92%;
+	top: 64%;
+	transform: translate(calc(-92%), calc(-64%));
+	font-size: 35px;
+	width:300px;
+	text-align: center;
+}
+
+#koikoimulti{
+	position:fixed;
+	left: 10%;
+	top: 52%;
+	transform: translate(calc(-52%), calc(-10%));
+	font-size: 35px;
+	width:300px;
+	text-align: center;
+}
+
+#yuyokoikoiscore{
+	position:fixed;
+	left: 92%;
+	top: 47%;
+	transform: translate(calc(-92%), calc(-47%));
+	font-size: 35px;
+	width:300px;
+	text-align: center;
+}
+
+#koikoirestart{
+	position:fixed;
+	left: 3%;
+	top: 18%;
+	transform: translate(calc(-3%), calc(-18%));
+	font-size: 35px;
+	padding: 15px;
+	padding-left: 45px;
+	padding-right: 45px;
+	outline: 2px solid black;
+	border-radius: 5px;
+}
+
+#koikoimenu{
+	position: fixed;
+	width:100vw;
+	height:100vh;
+	margin: -8px;
+	z-index: 30;
+	background-color: rgba(0,0,0,0.8);
+	visibility: hidden;
+}
+
+#koikoimenu_player{
+	position:fixed;
+	left: 50%;
+	top: 25%;
+	transform: translate(calc(-50%), calc(-25%));
+	font-size: 35px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+#koikoimenu_score{
+	position:fixed;
+	left: 50%;
+	top: 30%;
+	transform: translate(calc(-50%), calc(-30%));
+	width:auto;
+	font-size: 20px;
+	font-size: 25px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+#koikoibutton{
+	position:fixed;
+	left: 50%;
+	top: 55%;
+	transform: translate(calc(-50%), calc(-55%));
+	font-size: 35px;
+	padding: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width:250px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	outline: 2px solid rgb(255, 0, 0);
+	border-radius: 5px;
+	background-color: rgb(255, 0, 0);
+}
+
+#stopbutton{
+	position:fixed;
+	left: 50%;
+	top: 70%;
+	transform: translate(calc(-50%), calc(-70%));
+	font-size: 35px;
+	padding: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width:250px;
+	text-align: center;
+	outline: 2px solid rgb(0, 0, 0);
+	border-radius: 5px;
+	background-color: rgb(196, 196, 196);
+}
+
 #yuyohandgroup{
-	position:absolute;
+	position:fixed;
 	left: 70%;
 	top: 50%;
 	zoom:2.5;
 	transform: translate(calc(-70%), calc(-50% - 150px));
 }
 #yuyohand{
-	position:absolute;
+	position:fixed;
 	z-index: 1;
 	width:75px;
 	top:40px;
 	left:-15px;
 }
 #koikoiyuyo{
-	position:absolute;
+	position:fixed;
 	z-index: 0;
 	width: 100px;
 
 }
 
 #card1{
-	position:absolute;
+	position:fixed;
 	width: 18px;
 	aspect-ratio: 1/1.72;
 	z-index: 4;
@@ -287,7 +396,7 @@ html::-webkit-scrollbar {
 	rotate: -15deg;
 }
 #card2{
-	position:absolute;
+	position:fixed;
 	width: 18px;
 	aspect-ratio: 1/1.72;
 	top:32px;
@@ -297,7 +406,7 @@ html::-webkit-scrollbar {
 
 }
 #card3{
-	position:absolute;
+	position:fixed;
 	width: 18px;
 	aspect-ratio: 1/1.72;
 	top:35px;
@@ -308,7 +417,7 @@ html::-webkit-scrollbar {
 }
 
 #yuyokoikoicombos {
-	position: absolute;
+	position: fixed;
 	left: 35%;
 	top: 20%;
 	transform: translate(calc(-35%),calc(-20% + 5px));
@@ -317,9 +426,8 @@ html::-webkit-scrollbar {
 	grid-template-rows: 60px 60px 60px 60px;
 }
 
-
 #playercards{
-	position: absolute;
+	position: fixed;
 	left: 20%;
 	top: 95%;
 	transform: translate(calc(-20%),calc(-95% + 10px));
@@ -329,7 +437,7 @@ html::-webkit-scrollbar {
 }
 
 #playercombos{
-	position: absolute;
+	position: fixed;
 	left: 95%;
 	top: 95%;
 	transform: translate(calc(-95%),calc(-95% + 5px));
@@ -350,13 +458,13 @@ html::-webkit-scrollbar {
 }
 
 #maindeck{
-	position: absolute;
+	position: fixed;
 	left: 20%;
 	top: 50%;
 	transform: translate(calc(-20%),calc(-50% - 15px));
 }
 #cardresult,#cardback,#standingdeck{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	outline: 1px solid #d8d8d8
@@ -364,16 +472,10 @@ html::-webkit-scrollbar {
 
 #cardresult{
 	z-index: 2;
-	/* animation-name: flip;
-	animation-duration: 1s;
-	animation-fill-mode: forwards; */
 }
 
 #cardback{
 	z-index: 3;
-	/* animation-name: backflip;
-	animation-duration: 1s;
-	animation-fill-mode: forwards; */
 }
 
 #maintable {
@@ -412,6 +514,11 @@ html::-webkit-scrollbar {
 	100% {transform: rotate3d(0, 0, 1, 0deg); top: 0;}
 }
 
+@keyframes reset{
+	0%{transform: rotate3d(1, 0, 0, 90deg); top: 0;}
+	100%{transform: rotate3d(1, 0, 0, 90deg); top: 0;}
+}
+
 /*///////////////////////////////////////////////////////
 //////////////////// koikoi.html ////////////////////////
 /////////////////////// mobile //////////////////////////
@@ -424,7 +531,7 @@ html::-webkit-scrollbar {
 	}
 	
 	#gamearea{
-		position: absolute;
+		position: fixed;
 		width:100vw;
 		height:93vh;
 		margin: -8px;
@@ -434,28 +541,136 @@ html::-webkit-scrollbar {
 		word-break:keep-all;
 	}
 
+	#koikoiscore{
+		position:fixed;
+		left: 82%;
+		top: 72%;
+		transform: translate(calc(-82%), calc(-72%));
+		font-size: 15px;
+		width:100px;
+		text-align: center;
+	}
+
+	#koikoimulti{
+		position:fixed;
+		left: 50%;
+		top: 44%;
+		transform: translate(calc(-50%), calc(-44%));
+		font-size: 15px;
+		width:100px;
+		text-align: center;
+	}
+
+	#yuyokoikoiscore{
+		position:fixed;
+		left: 82%;
+		top: 22%;
+		transform: translate(calc(-82%), calc(-22%));
+		font-size: 15px;
+		width:100px;
+		text-align: center;
+	}
+
+	#koikoirestart{
+		position:fixed;
+		left: 5%;
+		top: 11%;
+		transform: translate(calc(-5%), calc(-11%));
+		font-size: 15px;
+		padding: 8px;
+		padding-left: 15px;
+		padding-right: 15px;
+		outline: 2px solid black;
+		border-radius: 5px;
+	}
+
+	#koikoimenu{
+		position: fixed;
+		width:100vw;
+		height:100vh;
+		margin: -8px;
+		z-index: 30;
+		background-color: rgba(0,0,0,0.8);
+		visibility: hidden;
+	}
+
+	#koikoimenu_player{
+		position:fixed;
+		left: 50%;
+		top: 20%;
+		transform: translate(calc(-50%), calc(-20%));
+		width:auto;
+		font-size: 35px;
+		color: rgb(255, 255, 255);
+		text-align: center;
+	}
+
+	#koikoimenu_score{
+		position:fixed;
+		left: 50%;
+		top: 25%;
+		transform: translate(calc(-50%), calc(-25%));
+		width:auto;
+		font-size: 20px;
+		color: rgb(255, 255, 255);
+		text-align: center;
+	}
+
+	#koikoibutton{
+		position:fixed;
+		left: 50%;
+		top: 45%;
+		transform: translate(calc(-50%), calc(-45%));
+		font-size: 30px;
+		padding: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width:200px;
+		text-align: center;
+		outline: 2px solid rgb(255, 0, 0);
+		color: rgb(255, 255, 255);
+		border-radius: 10px;
+		background-color: rgb(255, 0, 0);
+	}
+
+	#stopbutton{
+		position:fixed;
+		left: 50%;
+		top: 60%;
+		transform: translate(calc(-50%), calc(-60%));
+		font-size: 30px;
+		padding: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width:200px;
+		text-align: center;
+		outline: 2px solid rgb(0, 0, 0);
+		border-radius: 5px;
+		background-color: rgb(196, 196, 196);
+	}
+
 	#yuyohandgroup{
-		position:absolute;
+		position:fixed;
 		left: 50%;
 		top: 50%;
 		zoom:1.1;
 		transform: translate(calc(-50% - 45px), calc(-50% - 265px));
 	}
 	#yuyohand{
-		position:absolute;
+		position:fixed;
 		z-index: 1;
 		width:75px;
 		top:40px;
 		left:-15px;
 	}
 	#koikoiyuyo{
-		position:absolute;
+		position:fixed;
 		z-index: 0;
 		width: 100px;
 	}
 
 	#card1{
-		position:absolute;
+		position:fixed;
 		width: 18px;
 		aspect-ratio: 1/1.72;
 		z-index: 4;
@@ -465,7 +680,7 @@ html::-webkit-scrollbar {
 
 	}
 	#card2{
-		position:absolute;
+		position:fixed;
 		width: 18px;
 		aspect-ratio: 1/1.72;
 		top:32px;
@@ -475,7 +690,7 @@ html::-webkit-scrollbar {
 
 	}
 	#card3{
-		position:absolute;
+		position:fixed;
 		width: 18px;
 		aspect-ratio: 1/1.72;
 		top:35px;
@@ -486,7 +701,7 @@ html::-webkit-scrollbar {
 	}
 
 	#yuyokoikoicombos {
-		position: absolute;
+		position: fixed;
 		left: 50%;
 		top: 50%;
 		transform: translate(calc(-50% + 5px),calc(-50% - 115px));
@@ -497,7 +712,7 @@ html::-webkit-scrollbar {
 
 
 	#playercards{
-		position: absolute;
+		position: fixed;
 		left: 50%;
 		top: 50%;
 		transform: translate(calc(-50%),calc(-50% + 310px));
@@ -507,7 +722,7 @@ html::-webkit-scrollbar {
 	}
 
 	#playercombos{
-		position: absolute;
+		position: fixed;
 		left: 50%;
 		top: 50%;
 		transform: translate(calc(-50% + 5px),calc(-50% + 180px));
@@ -528,13 +743,13 @@ html::-webkit-scrollbar {
 	}
 
 	#maindeck{
-		position: absolute;
+		position: fixed;
 		left: 50%;
 		top: 50%;
 		transform: translate(calc(-50% - 188px),-50%);
 	}
 	#cardresult,#cardback,#standingdeck{
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		outline: 1px solid #d8d8d8
@@ -542,16 +757,10 @@ html::-webkit-scrollbar {
 
 	#cardresult{
 		z-index: 2;
-		/* animation-name: flip;
-		animation-duration: 1s;
-		animation-fill-mode: forwards; */
 	}
 
 	#cardback{
 		z-index: 3;
-		/* animation-name: backflip;
-		animation-duration: 1s;
-		animation-fill-mode: forwards; */
 	}
 
 	@keyframes backflip{
@@ -572,7 +781,7 @@ html::-webkit-scrollbar {
 
 
 	#maintable {
-		position: absolute;
+		position: fixed;
 		left: 50%;
 		top: 50%;
 		transform: translate(calc(-50% + 25px),calc(-50% + 30px));

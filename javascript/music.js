@@ -1,4 +1,4 @@
- window.addEventListener("resize", function(){
+window.addEventListener("resize", function(){
      window.resizeTo("416","620")
  })
 
@@ -42,12 +42,10 @@ setMusic()
 
 var playpause = false
 
-setInterval(function(){
-    if (albumsong.ended) {
-        setMusic()
-        albumsong.play()
-    }
-})
+albumsong.addEventListener("ended", function() {
+    setMusic()
+    albumsong.play()
+});
 
 function playpauseFlip(){
     if (playpause == false){

@@ -1,90 +1,183 @@
 {
     "> Welcome to Yuyo Learning World":{
-        "Introduction to Yuyo Learning World":[ "こんにちは and welcome to yuyo learning world :) _ [press the right arrow to go to the next page]", "this is the best website for learning Japanese with its frendly design", "And me :D , yuyo (有用) which actually translates to helpful or useful", "here in Yuyo Learning World you can go through all the nesessary lessons for learning Japanese including N-level lessons from JPLT", "and whilst you have some downtime between lessons you can play against me in a traditional Japanese Game of Koi-Koi", "or you can listen to one of my fravorite Japanese jazz albums which i think you will really like", "Thank you for choosing me to help you learn Japanese and I hope you have a fun time in Yuyo Learning World", "when you're ready you can head back to the subjects by pressing the text on the left"]
+        "Introduction to Yuyo Learning World":[ "こんにちは and welcome to yuyo learning world :) _ [you can click text to skip]", "this is the best website for learning Japanese with its frendly design", "And me :D , yuyo (有用) which actually translates to helpful or useful", "here in Yuyo Learning World you can go through all the nesessary lessons for learning Japanese including N-level lessons from JPLT", "and whilst you have some downtime between lessons you can play against me in a traditional Japanese Game of Koi-Koi", "or you can listen to one of my fravorite Japanese jazz albums which i think you will really like", "Thank you for choosing me to help you learn Japanese and I hope you have a fun time in Yuyo Learning World", "when you're ready you can head back to the subjects by pressing the text on the left"]
     },
     "> Subject 1 - Romaji":{
-        "What is romaji?":[ "test1", "test2", "test3", "test4"],
-        "why is romanji useful?":[ "test1", "test2", "test3", "test4"],
-        "Punctuation lesson":[ "test1", "test2", "test3", "test4"]
+        "What is romaji?":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "why is romanji useful?":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Punctuation lesson":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 2 - Hiragana":{
-        "What is Hiragana?":[ "test1", "test2", "test3", "test4"],
-        "a,i,u,e,o and n":[ "test1", "test2", "test3", "test4"],
-        "ka,ki,ku,ke,ko":[ "test1", "test2", "test3", "test4"],
-        "sa,si,su,se,so":[ "test1", "test2", "test3", "test4"],
-        "ta,ti,tu,te,to":[ "test1", "test2", "test3", "test4"],
-        "na,ni,nu,ne,no":[ "test1", "test2", "test3", "test4"],
-        "ha,hi,hu,he,ho":[ "test1", "test2", "test3", "test4"],
-        "ma,mi,mu,me,mo":[ "test1", "test2", "test3", "test4"],
-        "ya,yu,yo":[ "test1", "test2", "test3", "test4"],
-        "ra,ri,ru,re,ro":[ "test1", "test2", "test3", "test4"],
-        "wa,wo":[ "test1", "test2", "test3", "test4"]
+        "What is Hiragana?":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "a,i,u,e,o and n":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ka,ki,ku,ke,ko":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "sa,si,su,se,so":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ta,ti,tu,te,to":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "na,ni,nu,ne,no":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ha,hi,hu,he,ho":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ma,mi,mu,me,mo":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ya,yu,yo":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ra,ri,ru,re,ro":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "wa,wo":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 3 - Katakana":{
-        "What is Katakana?":[ "test1", "test2", "test3", "test4"],
-        "a,i,u,e,o and n":[ "test1", "test2", "test3", "test4"],
-        "ka,ki,ku,ke,ko":[ "test1", "test2", "test3", "test4"],
-        "sa,si,su,se,so":[ "test1", "test2", "test3", "test4"],
-        "ta,ti,tu,te,to":[ "test1", "test2", "test3", "test4"],
-        "na,ni,nu,ne,no":[ "test1", "test2", "test3", "test4"],
-        "ha,hi,hu,he,ho":[ "test1", "test2", "test3", "test4"],
-        "ma,mi,mu,me,mo":[ "test1", "test2", "test3", "test4"],
-        "ya,yu,yo":[ "test1", "test2", "test3", "test4"],
-        "ra,ri,ru,re,ro":[ "test1", "test2", "test3", "test4"],
-        "wa,wo":[ "test1", "test2", "test3", "test4"]
+        "What is Katakana?":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "a,i,u,e,o and n":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ka,ki,ku,ke,ko":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "sa,si,su,se,so":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ta,ti,tu,te,to":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "na,ni,nu,ne,no":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ha,hi,hu,he,ho":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ma,mi,mu,me,mo":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ya,yu,yo":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "ra,ri,ru,re,ro":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "wa,wo":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 4 - Daily words":{
-        "Greetings and Goodbyes":[ "test1", "test2", "test3", "test4"],
-        "Small talk":[ "test1", "test2", "test3", "test4"],
-        "Directions":[ "test1", "test2", "test3", "test4"],
-        "Giving and wanting":[ "test1", "test2", "test3", "test4"],
-        "Basic objects and numbers":[ "test1", "test2", "test3", "test4"]
+        "Greetings and Goodbyes":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Small talk":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Directions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Giving and wanting":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Basic objects and numbers":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 5 - N-level intro":{
-        "What are N-Levels?":[ "test1", "test2", "test3", "test4"],
-        "Why are they important?":[ "test1", "test2", "test3", "test4"],
-        "What is `Grammar`, `Kanji` and `Vocabulary`?":[ "test1", "test2", "test3", "test4"]
+        "What are N-Levels?":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Why are they important?":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "What is `Grammar`, `Kanji` and `Vocabulary`?":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 6 - N5 Grammar":{
-        "lesson21":[ "test1", "test2", "test3", "test4"]
-    },
-    "> Subject 7 - N5 Kanji":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+        "Basic Sentence Structure":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Particles 1":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Particles 2":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Verb Conjugations":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Adjectives":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Basic Question Words":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Possession and Existence":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 8 - N5 Vocabulary":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+        "Greetings and Introductions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Numbers, Days, and Time Expressions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Family and Relationships":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Common Verbs and Adjectives":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Everyday Objects and Locations":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Food and Dining":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Weather and Seasons":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
+    },
+    "> Subject 7 - N5 Kanji":{
+        "Numbers":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Time-Related Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Nature Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Directions and Locations":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Basic People and Actions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Everyday Life":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Simple Verbs in Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 9 - N4 Grammar":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+        "Verb Potential Form":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Expressing Frequency":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Giving and Receiving":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Conditional Form":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Expressing Purpose":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Introduction to Honorifics":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Using ～から and ～ので for Reasons":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
-    "> Subject 10 - N4 Kanji":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+    "> Subject 10 - N4 Vocabulary":{
+        "Daily Activities and Routines":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Transportation and Directions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Polite Expressions and Requests":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Shopping and Money Terms":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Describing People and Places":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Hobbies and Entertainment":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Workplace and School Vocabulary":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
-    "> Subject 11 - N4 Vocabulary":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+    "> Subject 11 - N4 Kanji":{
+        "Expanded Time and Nature Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Directions and Movement":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Common Adjectives":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Places and Buildings":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Numbers and Counting Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Everyday Actions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Expanded Verbs":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 12 - N3 Grammar":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+        "Expressing Conjecture":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Expressing Actions in Progress":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Cause and Effect":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Contrasting Ideas":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Expressing Intent":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Using ～ながら to Show Simultaneous Actions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Verb Conjugations":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
-    "> Subject 13 - N3 Kanji":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+    "> Subject 13 - N3 Vocabulary":{
+        "Work and Office Terminology":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Cultural and Social Vocabulary":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Synonyms and Antonyms in Context":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Idiomatic Expressions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Words for Emotions and Reactions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Describing Complex Relationships":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Abstract Concepts":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
-    "> Subject 14 - N3 Vocabulary":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+    "> Subject 14 - N3 Kanji":{
+        "Advanced Time and Place ":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Expanded People and Roles":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Transportation Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Kanji for Feelings and Emotions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Numbers and Quantities":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Work and School":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Advanced Verbs":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 15 - N2 Grammar":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+        "Expressing Nuanced Opinions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Making Suggestions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Advanced Conditional Forms":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Expressing Uncertainty":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Cause and Effect":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Using ～ような気がする to Express Assumptions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Complex Sentence Structures":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
-    "> Subject 16 - N2 Kanji":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+    "> Subject 16 - N2 Vocabulary":{
+        "Business and Professional Terms":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Words from News and Media":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Formal and Polite Expressions in Context":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Advanced Idiomatic Expressions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Technical Vocabulary for Essays and Reports":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Words for Abstract and Logical Thinking":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Advanced Adjectives and Adverbs":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
-    "> Subject 17 - N2 Vocabulary":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+    "> Subject 17 - N2 Kanji":{
+        "Advanced Business and Work Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Abstract Concepts":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Words for Movement and Travel":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Time and Events":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Emotional Expressions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Common Verbs in Complex Forms":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Society and Law":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
     "> Subject 18 - N1 Grammar":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+        "Expressing Conjecture and Hypothesis":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Advanced Passive and Causative Forms":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Emphasis and Nuance":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Mastering Subtle Grammar Differences":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Complex Time Expressions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Advanced Sentence Structure":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Rarely Used Patterns":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     },
-    "> Subject 19 - N1 Kanji":{
-        "blank":[ "test1", "test2", "test3", "test4"]
+    "> Subject 19 - N2 Vocabulary":{
+        "Specialized Literary and Technical Terms":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Complex Abstract Words for Academic Essays":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Rare Idiomatic Expressions":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Advanced Synonyms and Nuanced Vocabulary":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Expressions for Debate and Persuasion":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Words for Philosophy and Ethics":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Formal and Written Japanese Vocabulary":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
+    },
+    "> Subject 20 - N1 Kanji":{
+        "Highly Abstract Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Political and Legal Terms":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Advanced Nature and Environment Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Rare Verbs and Nouns":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Cultural and Historical Kanji":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Kanji for Advanced Concepts":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"],
+        "Specialized Kanji in Context":[ "Hello, unfortunatly this lesson has not been completed yet _ Make sure you check back later once it has been added :)"]
     }
 }

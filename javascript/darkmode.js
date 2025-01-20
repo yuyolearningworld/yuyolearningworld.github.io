@@ -27,16 +27,13 @@ function darklight(){
         document.getElementById("darkmode").style.transition = ""
     },2400)
 }
-
 setInterval(function(){
     if (window.localStorage.getItem("darkmode") == 0){
         document.getElementById("darkmode").style.opacity = 0
-        document.body.style.cursor = "url('../misc/assets/cursor.png'), default";
         try{ document.getElementById("darklight").setAttribute("src", "../misc/assets/darkmode.png")}catch(err){}
     } 
     else if (window.localStorage.getItem("darkmode") == 1) {
         document.getElementById("darkmode").style.opacity = 1
-        document.body.style.cursor = "url('../misc/assets/cursor-darkmode.png'), default";
         try{ document.getElementById("darklight").setAttribute("src", "../misc/assets/lightmode.png")}catch(err){}
     } else {document.getElementById("darkmode").style.transition = ""}
 },100)
