@@ -1,11 +1,9 @@
-//note: uninstall modules except 2 used
-
 var fs = require('fs')
 var papa = require('papaparse');
 
-var subjectfile = fs.createReadStream('../../data/subject.csv');
-var lessonfile = fs.createReadStream('../../data/lesson.csv');
-var contentfile = fs.createReadStream('../../data/content.csv');
+var subjectfile = fs.createReadStream('../data/subject.csv');
+var lessonfile = fs.createReadStream('../data/lesson.csv');
+var contentfile = fs.createReadStream('../data/content.csv');
 
 papa.parse(subjectfile, {complete: function(subject){
     papa.parse(lessonfile, {complete: function(lesson){
@@ -27,7 +25,7 @@ papa.parse(subjectfile, {complete: function(subject){
                 var result = `{
 ${result.substring(0,result.length-2)}
 }`
-            fs.writeFile('../../data/data.json',result, function (err) {
+            fs.writeFile('../data/data.json',result, function (err) {
                 if (err) throw err})
             }
             main(subject["data"],lesson["data"],content["data"])
